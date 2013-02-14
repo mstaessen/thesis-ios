@@ -23,6 +23,15 @@
 		4CBB192116CCDC760070A187 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192016CCDC760070A187 /* Employee.m */; };
 		4CBB192716CCDC760070A187 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192616CCDC760070A187 /* Expense.m */; };
 		4CBB192B16CCE00F0070A187 /* ExpenseForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192A16CCE00F0070A187 /* ExpenseForm.m */; };
+		4CBB192E16CCE1650070A187 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192D16CCE1650070A187 /* HomeController.m */; };
+		4CBB193116CCE3330070A187 /* ExpenseFormOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */; };
+		4CBB193416CCE3500070A187 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193316CCE3500070A187 /* LoginController.m */; };
+		4CBB193716CCE3760070A187 /* PDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193616CCE3760070A187 /* PDFViewController.m */; };
+		4CBB193A16CCE3980070A187 /* InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193916CCE3970070A187 /* InfoController.m */; };
+		4CBB193D16CCE3B20070A187 /* AddOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193C16CCE3B20070A187 /* AddOverviewController.m */; };
+		4CBB194016CCE3D20070A187 /* DomesticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193F16CCE3D20070A187 /* DomesticController.m */; };
+		4CBB194316CCE3EB0070A187 /* AbroadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB194216CCE3EB0070A187 /* AbroadController.m */; };
+		4CBB194616CCE41C0070A187 /* SignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB194516CCE41C0070A187 /* SignController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +58,24 @@
 		4CBB192616CCDC760070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
 		4CBB192916CCE00F0070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = DAL/ExpenseForm.h; sourceTree = "<group>"; };
 		4CBB192A16CCE00F0070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = DAL/ExpenseForm.m; sourceTree = "<group>"; };
+		4CBB192C16CCE1650070A187 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
+		4CBB192D16CCE1650070A187 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
+		4CBB192F16CCE3330070A187 /* ExpenseFormOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseFormOverviewController.h; path = Controllers/ExpenseFormOverviewController.h; sourceTree = "<group>"; };
+		4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseFormOverviewController.m; path = Controllers/ExpenseFormOverviewController.m; sourceTree = "<group>"; };
+		4CBB193216CCE3500070A187 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController.h; sourceTree = "<group>"; };
+		4CBB193316CCE3500070A187 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = Controllers/LoginController.m; sourceTree = "<group>"; };
+		4CBB193516CCE3760070A187 /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFViewController.h; path = Controllers/PDFViewController.h; sourceTree = "<group>"; };
+		4CBB193616CCE3760070A187 /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFViewController.m; path = Controllers/PDFViewController.m; sourceTree = "<group>"; };
+		4CBB193816CCE3970070A187 /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoController.h; path = Controllers/InfoController.h; sourceTree = "<group>"; };
+		4CBB193916CCE3970070A187 /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoController.m; path = Controllers/InfoController.m; sourceTree = "<group>"; };
+		4CBB193B16CCE3B20070A187 /* AddOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddOverviewController.h; path = Controllers/AddOverviewController.h; sourceTree = "<group>"; };
+		4CBB193C16CCE3B20070A187 /* AddOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddOverviewController.m; path = Controllers/AddOverviewController.m; sourceTree = "<group>"; };
+		4CBB193E16CCE3D20070A187 /* DomesticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticController.h; path = Controllers/DomesticController.h; sourceTree = "<group>"; };
+		4CBB193F16CCE3D20070A187 /* DomesticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticController.m; path = Controllers/DomesticController.m; sourceTree = "<group>"; };
+		4CBB194116CCE3EB0070A187 /* AbroadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadController.h; path = Controllers/AbroadController.h; sourceTree = "<group>"; };
+		4CBB194216CCE3EB0070A187 /* AbroadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadController.m; path = Controllers/AbroadController.m; sourceTree = "<group>"; };
+		4CBB194416CCE41C0070A187 /* SignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignController.h; path = Controllers/SignController.h; sourceTree = "<group>"; };
+		4CBB194516CCE41C0070A187 /* SignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignController.m; path = Controllers/SignController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +126,7 @@
 		4CBB18FE16CCD4830070A187 /* ExpenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB194816CCE4370070A187 /* Controllers */,
 				4CBB190716CCD4830070A187 /* AppDelegate.h */,
 				4CBB190816CCD4830070A187 /* AppDelegate.m */,
 				4CBB192816CCDC810070A187 /* DAL */,
@@ -133,6 +161,32 @@
 				4CBB192016CCDC760070A187 /* Employee.m */,
 			);
 			name = DAL;
+			sourceTree = "<group>";
+		};
+		4CBB194816CCE4370070A187 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB194416CCE41C0070A187 /* SignController.h */,
+				4CBB194516CCE41C0070A187 /* SignController.m */,
+				4CBB194116CCE3EB0070A187 /* AbroadController.h */,
+				4CBB194216CCE3EB0070A187 /* AbroadController.m */,
+				4CBB193E16CCE3D20070A187 /* DomesticController.h */,
+				4CBB193F16CCE3D20070A187 /* DomesticController.m */,
+				4CBB193B16CCE3B20070A187 /* AddOverviewController.h */,
+				4CBB193C16CCE3B20070A187 /* AddOverviewController.m */,
+				4CBB193816CCE3970070A187 /* InfoController.h */,
+				4CBB193916CCE3970070A187 /* InfoController.m */,
+				4CBB193516CCE3760070A187 /* PDFViewController.h */,
+				4CBB193616CCE3760070A187 /* PDFViewController.m */,
+				4CBB193216CCE3500070A187 /* LoginController.h */,
+				4CBB193316CCE3500070A187 /* LoginController.m */,
+				4CBB192F16CCE3330070A187 /* ExpenseFormOverviewController.h */,
+				4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */,
+				4CBB192C16CCE1650070A187 /* HomeController.h */,
+				4CBB192D16CCE1650070A187 /* HomeController.m */,
+			);
+			name = Controllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +262,15 @@
 				4CBB192116CCDC760070A187 /* Employee.m in Sources */,
 				4CBB192716CCDC760070A187 /* Expense.m in Sources */,
 				4CBB192B16CCE00F0070A187 /* ExpenseForm.m in Sources */,
+				4CBB192E16CCE1650070A187 /* HomeController.m in Sources */,
+				4CBB193116CCE3330070A187 /* ExpenseFormOverviewController.m in Sources */,
+				4CBB193416CCE3500070A187 /* LoginController.m in Sources */,
+				4CBB193716CCE3760070A187 /* PDFViewController.m in Sources */,
+				4CBB193A16CCE3980070A187 /* InfoController.m in Sources */,
+				4CBB193D16CCE3B20070A187 /* AddOverviewController.m in Sources */,
+				4CBB194016CCE3D20070A187 /* DomesticController.m in Sources */,
+				4CBB194316CCE3EB0070A187 /* AbroadController.m in Sources */,
+				4CBB194616CCE41C0070A187 /* SignController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
