@@ -32,6 +32,14 @@
 		4CBB194016CCE3D20070A187 /* DomesticController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193F16CCE3D20070A187 /* DomesticController.m */; };
 		4CBB194316CCE3EB0070A187 /* AbroadController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB194216CCE3EB0070A187 /* AbroadController.m */; };
 		4CBB194616CCE41C0070A187 /* SignController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB194516CCE41C0070A187 /* SignController.m */; };
+		4CBB198816CCF2D10070A187 /* UIDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB198716CCF2D10070A187 /* UIDrawView.m */; };
+		4CBB198B16CCF3B00070A187 /* UIDateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */; };
+		4CBB198E16CCF3CA0070A187 /* UIProjectCodeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */; };
+		4CBB199116CCF3E10070A187 /* UIAbroadTypeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */; };
+		4CBB199516CCF4010070A187 /* UICurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199416CCF4010070A187 /* UICurrencyTextField.m */; };
+		4CBB199816CCF4220070A187 /* UIDomesticTypeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */; };
+		4CBB199C16CCF4730070A187 /* UIMonthTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199B16CCF4730070A187 /* UIMonthTextField.m */; };
+		4CBB199F16CCF4950070A187 /* UIUnitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199E16CCF4950070A187 /* UIUnitTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +84,22 @@
 		4CBB194216CCE3EB0070A187 /* AbroadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadController.m; path = Controllers/AbroadController.m; sourceTree = "<group>"; };
 		4CBB194416CCE41C0070A187 /* SignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignController.h; path = Controllers/SignController.h; sourceTree = "<group>"; };
 		4CBB194516CCE41C0070A187 /* SignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignController.m; path = Controllers/SignController.m; sourceTree = "<group>"; };
+		4CBB198616CCF2D10070A187 /* UIDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDrawView.h; path = ../Controls/UIDrawView.h; sourceTree = "<group>"; };
+		4CBB198716CCF2D10070A187 /* UIDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDrawView.m; path = ../Controls/UIDrawView.m; sourceTree = "<group>"; };
+		4CBB198916CCF3AF0070A187 /* UIDateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDateTextField.h; path = Controls/UIDateTextField.h; sourceTree = "<group>"; };
+		4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDateTextField.m; path = Controls/UIDateTextField.m; sourceTree = "<group>"; };
+		4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIProjectCodeTextField.h; path = Controls/UIProjectCodeTextField.h; sourceTree = "<group>"; };
+		4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIProjectCodeTextField.m; path = Controls/UIProjectCodeTextField.m; sourceTree = "<group>"; };
+		4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAbroadTypeTextField.h; path = Controls/UIAbroadTypeTextField.h; sourceTree = "<group>"; };
+		4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAbroadTypeTextField.m; path = Controls/UIAbroadTypeTextField.m; sourceTree = "<group>"; };
+		4CBB199316CCF4010070A187 /* UICurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICurrencyTextField.h; path = Controls/UICurrencyTextField.h; sourceTree = "<group>"; };
+		4CBB199416CCF4010070A187 /* UICurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICurrencyTextField.m; path = Controls/UICurrencyTextField.m; sourceTree = "<group>"; };
+		4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDomesticTypeTextField.h; path = Controls/UIDomesticTypeTextField.h; sourceTree = "<group>"; };
+		4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDomesticTypeTextField.m; path = Controls/UIDomesticTypeTextField.m; sourceTree = "<group>"; };
+		4CBB199A16CCF4730070A187 /* UIMonthTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMonthTextField.h; path = Controls/UIMonthTextField.h; sourceTree = "<group>"; };
+		4CBB199B16CCF4730070A187 /* UIMonthTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMonthTextField.m; path = Controls/UIMonthTextField.m; sourceTree = "<group>"; };
+		4CBB199D16CCF4950070A187 /* UIUnitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUnitTextField.h; path = Controls/UIUnitTextField.h; sourceTree = "<group>"; };
+		4CBB199E16CCF4950070A187 /* UIUnitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUnitTextField.m; path = Controls/UIUnitTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +150,9 @@
 		4CBB18FE16CCD4830070A187 /* ExpenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB199916CCF42B0070A187 /* Controls */,
+				4CBB198616CCF2D10070A187 /* UIDrawView.h */,
+				4CBB198716CCF2D10070A187 /* UIDrawView.m */,
 				4CBB194816CCE4370070A187 /* Controllers */,
 				4CBB190716CCD4830070A187 /* AppDelegate.h */,
 				4CBB190816CCD4830070A187 /* AppDelegate.m */,
@@ -186,6 +213,28 @@
 				4CBB192D16CCE1650070A187 /* HomeController.m */,
 			);
 			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		4CBB199916CCF42B0070A187 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */,
+				4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */,
+				4CBB199316CCF4010070A187 /* UICurrencyTextField.h */,
+				4CBB199416CCF4010070A187 /* UICurrencyTextField.m */,
+				4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */,
+				4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */,
+				4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */,
+				4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */,
+				4CBB198916CCF3AF0070A187 /* UIDateTextField.h */,
+				4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */,
+				4CBB199A16CCF4730070A187 /* UIMonthTextField.h */,
+				4CBB199B16CCF4730070A187 /* UIMonthTextField.m */,
+				4CBB199D16CCF4950070A187 /* UIUnitTextField.h */,
+				4CBB199E16CCF4950070A187 /* UIUnitTextField.m */,
+			);
+			name = Controls;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -271,6 +320,14 @@
 				4CBB194016CCE3D20070A187 /* DomesticController.m in Sources */,
 				4CBB194316CCE3EB0070A187 /* AbroadController.m in Sources */,
 				4CBB194616CCE41C0070A187 /* SignController.m in Sources */,
+				4CBB198816CCF2D10070A187 /* UIDrawView.m in Sources */,
+				4CBB198B16CCF3B00070A187 /* UIDateTextField.m in Sources */,
+				4CBB198E16CCF3CA0070A187 /* UIProjectCodeTextField.m in Sources */,
+				4CBB199116CCF3E10070A187 /* UIAbroadTypeTextField.m in Sources */,
+				4CBB199516CCF4010070A187 /* UICurrencyTextField.m in Sources */,
+				4CBB199816CCF4220070A187 /* UIDomesticTypeTextField.m in Sources */,
+				4CBB199C16CCF4730070A187 /* UIMonthTextField.m in Sources */,
+				4CBB199F16CCF4950070A187 /* UIUnitTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

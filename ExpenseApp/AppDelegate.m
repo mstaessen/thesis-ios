@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeController.h"
 
 @implementation AppDelegate
 
@@ -16,10 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//    return YES;
+	
+	
+	// Override point for customization after application launch.
+	if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+	    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+	    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+	    splitViewController.delegate = (id)navigationController.topViewController;
+	    
+	    UINavigationController *masterNavigationController = splitViewController.viewControllers[0];
+	    HomeController *controller = (HomeController *)masterNavigationController.topViewController;
+	    controller.managedObjectContext = self.managedObjectContext;
+	} else {
+	    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+	    HomeController *controller = (HomeController *)navigationController.topViewController;
+	    controller.managedObjectContext = self.managedObjectContext;
+	}
     return YES;
 }
 

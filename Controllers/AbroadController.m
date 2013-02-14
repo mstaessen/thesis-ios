@@ -118,4 +118,9 @@
      */
 }
 
+- (IBAction)chooseEvidence:(UIButton *)sender {
+}
+
+- (IBAction)add:(UIButton *)sender {
+}
 @end

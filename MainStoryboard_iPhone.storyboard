@@ -158,7 +158,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="g6z-Oz-ook"/>
                     <connections>
-                        <outlet property="pdfView" destination="a5U-kx-Vmb" id="sKk-kJ-LAC"/>
+                        <outlet property="PdfView" destination="a5U-kx-Vmb" id="hLr-mz-vvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nG0-W3-T2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,12 +445,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Your info" id="MoP-pL-vYS"/>
                     <connections>
-                        <outlet property="lblFirstName" destination="1vp-fh-CoC" id="vd2-sn-GEM"/>
-                        <outlet property="lblLastName" destination="xxd-qZ-Rl9" id="dfY-e7-Fz9"/>
-                        <outlet property="txtDate" destination="AC2-fe-5mY" id="awc-6s-qkl"/>
-                        <outlet property="txtEmail" destination="vu6-EF-gMX" id="aVC-H3-Oi3"/>
-                        <outlet property="txtEmployeeNumber" destination="aFt-94-jEr" id="GnY-V9-a0v"/>
-                        <outlet property="txtUnit" destination="prL-RY-FFE" id="gOy-ij-j1g"/>
+                        <outlet property="lblFirstName" destination="1vp-fh-CoC" id="Kqn-PF-tfd"/>
+                        <outlet property="lblLastName" destination="xxd-qZ-Rl9" id="7Xk-Mm-a94"/>
+                        <outlet property="txtDate" destination="AC2-fe-5mY" id="CWm-pp-HeS"/>
+                        <outlet property="txtEmail" destination="vu6-EF-gMX" id="6nJ-VO-Yxd"/>
+                        <outlet property="txtEmployeeNumber" destination="aFt-94-jEr" id="8t8-dD-ZTv"/>
+                        <outlet property="txtUnit" destination="prL-RY-FFE" id="l1c-5B-VC2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpv-TT-NJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -564,16 +564,16 @@
                     <navigationItem key="navigationItem" title="Sign" id="jfU-1A-UsA">
                         <barButtonItem key="rightBarButtonItem" title="Send" style="done" id="cWh-bd-to4">
                             <connections>
-                                <action selector="send:" destination="9k1-rl-ZBw" id="ezT-Tg-YNq"/>
+                                <action selector="send:" destination="9k1-rl-ZBw" id="Gvh-5C-KO8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="drawView" destination="HsZ-eD-rRN" id="QKw-Fb-T3O"/>
-                        <outlet property="swNotification" destination="moS-L4-SkX" id="r6j-c2-8In"/>
-                        <outlet property="txtRemarks" destination="TAc-9n-YqH" id="gyD-3M-Ibn"/>
+                        <outlet property="signatureView" destination="HsZ-eD-rRN" id="dlC-QR-zSa"/>
+                        <outlet property="swNotifications" destination="moS-L4-SkX" id="5Ir-v4-8Zo"/>
+                        <outlet property="txtRemarks" destination="TAc-9n-YqH" id="nXb-kt-PFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4G-QE-hq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -764,7 +764,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="chooseEvidence:" destination="wHT-Gf-NS0" eventType="touchUpInside" id="poe-9C-iZz"/>
+                                                        <action selector="chooseEvidence:" destination="wHT-Gf-NS0" eventType="touchUpInside" id="LmV-a5-rkT"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -797,8 +797,8 @@
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="add:" destination="wHT-Gf-NS0" eventType="touchUpInside" id="I73-Ob-Ehh"/>
                                                         <action selector="add:" destination="zL8-RP-F9f" eventType="touchUpInside" id="N4j-di-erT"/>
+                                                        <action selector="add:" destination="wHT-Gf-NS0" eventType="touchUpInside" id="bT6-Ru-Vll"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -816,14 +816,14 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Abroad" id="hah-Rn-3wk"/>
                     <connections>
-                        <outlet property="evidenceImageView" destination="Mrh-HO-7fo" id="ExE-aG-GM9"/>
-                        <outlet property="lblAmountEuro" destination="sKo-fb-hBy" id="vr5-d5-PwW"/>
-                        <outlet property="txtAmount" destination="0wF-ZI-lAa" id="UKl-sI-YCd"/>
-                        <outlet property="txtCurrency" destination="nAI-ul-ngX" id="GQD-Ce-JJo"/>
-                        <outlet property="txtDate" destination="7sb-wV-U03" id="WYY-ID-Ebd"/>
-                        <outlet property="txtProjectCode" destination="fsq-Hy-w8r" id="OpB-aL-j4c"/>
-                        <outlet property="txtRemarks" destination="Oyg-cF-C8H" id="1tp-Gi-cdP"/>
-                        <outlet property="txtType" destination="yjH-Gv-tWH" id="9f4-5I-z2k"/>
+                        <outlet property="imgEvidence" destination="Mrh-HO-7fo" id="xX0-WJ-Y5k"/>
+                        <outlet property="lblAmountEuro" destination="sKo-fb-hBy" id="RGe-C3-fwb"/>
+                        <outlet property="txtAmount" destination="0wF-ZI-lAa" id="cLU-ko-cGi"/>
+                        <outlet property="txtCurrency" destination="nAI-ul-ngX" id="pQt-2m-373"/>
+                        <outlet property="txtDate" destination="7sb-wV-U03" id="tqq-8J-d3H"/>
+                        <outlet property="txtProjectCode" destination="fsq-Hy-w8r" id="Nx8-Hk-HNN"/>
+                        <outlet property="txtRemarks" destination="Oyg-cF-C8H" id="yJm-C7-FN8"/>
+                        <outlet property="txtType" destination="yjH-Gv-tWH" id="U5N-RS-jNF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kF4-zh-ekX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -924,7 +924,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Amount" textAlignment="right" minimumFontSize="17" id="dfl-FE-VNa">
-                                                    <rect key="frame" x="87" y="11" width="172" height="21"/>
+                                                    <rect key="frame" x="87" y="12" width="172" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="textColor" red="0.21960784310000001" green="0.3294117647" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -989,7 +989,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="chooseEvidence:" destination="zL8-RP-F9f" eventType="touchUpInside" id="ePM-GE-8ie"/>
+                                                        <action selector="chooseEvidence:" destination="zL8-RP-F9f" eventType="touchUpInside" id="4Yg-uN-i6y"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1022,7 +1022,7 @@
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="add:" destination="zL8-RP-F9f" eventType="touchUpInside" id="yk8-6B-0r6"/>
+                                                        <action selector="add:" destination="zL8-RP-F9f" eventType="touchUpInside" id="QY7-p7-uAk"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1040,12 +1040,12 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Domestic" id="2wb-HP-6ug"/>
                     <connections>
-                        <outlet property="evidenceImageView" destination="wM3-NO-H9B" id="Jye-db-bcv"/>
-                        <outlet property="txtAmount" destination="dfl-FE-VNa" id="sjD-e9-GBT"/>
-                        <outlet property="txtDate" destination="d4R-to-rBE" id="bTS-aS-e1r"/>
-                        <outlet property="txtProjectCode" destination="PHm-W8-xyq" id="8cC-hO-UUJ"/>
-                        <outlet property="txtRemarks" destination="fMn-i3-1LP" id="9TG-jf-ThI"/>
-                        <outlet property="txtType" destination="V0Y-0V-3ja" id="uG8-dr-akf"/>
+                        <outlet property="imgEvidence" destination="wM3-NO-H9B" id="yAM-RM-zOC"/>
+                        <outlet property="txtAmount" destination="dfl-FE-VNa" id="KJz-ic-Jgo"/>
+                        <outlet property="txtDate" destination="d4R-to-rBE" id="Nle-Bs-0hK"/>
+                        <outlet property="txtProjectCode" destination="PHm-W8-xyq" id="e8q-P3-93t"/>
+                        <outlet property="txtRemarks" destination="fMn-i3-1LP" id="F9B-3o-Wk3"/>
+                        <outlet property="txtType" destination="V0Y-0V-3ja" id="Vwt-Xk-W72"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGI-GJ-2lc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1138,7 +1138,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="login:" destination="PDQ-8W-mwg" eventType="touchUpInside" id="jdE-yW-6HB"/>
+                                                        <action selector="login:" destination="PDQ-8W-mwg" eventType="touchUpInside" id="aTA-xa-ZEu"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1154,8 +1154,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="txtEmail" destination="Xsf-T6-oKp" id="iB2-mF-ptM"/>
-                        <outlet property="txtPassword" destination="gKz-Bg-bjz" id="Cky-4d-AAR"/>
+                        <outlet property="txtEmail" destination="Xsf-T6-oKp" id="5a2-go-gC1"/>
+                        <outlet property="txtPassword" destination="gKz-Bg-bjz" id="eGy-ag-MeJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lag-59-hGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1166,12 +1166,34 @@
     <classes>
         <class className="AbroadController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AbroadController.h"/>
+            <relationships>
+                <relationship kind="action" name="add:" candidateClass="UIButton"/>
+                <relationship kind="action" name="chooseEvidence:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imgEvidence" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblAmountEuro" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtCurrency" candidateClass="UICurrencyTextField"/>
+                <relationship kind="outlet" name="txtDate" candidateClass="UIDateTextField"/>
+                <relationship kind="outlet" name="txtProjectCode" candidateClass="UIProjectCodeTextField"/>
+                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtType" candidateClass="UIAbroadTypeTextField"/>
+            </relationships>
         </class>
         <class className="AddOverviewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOverviewController.h"/>
         </class>
         <class className="DomesticController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DomesticController.h"/>
+            <relationships>
+                <relationship kind="action" name="add:" candidateClass="UIButton"/>
+                <relationship kind="action" name="chooseEvidence:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="imgEvidence" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtDate" candidateClass="UIDateTextField"/>
+                <relationship kind="outlet" name="txtProjectCode" candidateClass="UIProjectCodeTextField"/>
+                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtType" candidateClass="UIDomesticTypeTextField"/>
+            </relationships>
         </class>
         <class className="ExpenseFormOverviewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExpenseFormOverviewController.h"/>
@@ -1185,15 +1207,61 @@
         </class>
         <class className="InfoController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lblFirstName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lblLastName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="txtDate" candidateClass="UIMonthTextField"/>
+                <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtEmployeeNumber" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtUnit" candidateClass="UIUnitTextField"/>
+            </relationships>
         </class>
         <class className="LoginController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginController.h"/>
+            <relationships>
+                <relationship kind="action" name="login:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="txtPassword" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="PDFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PDFViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="PdfView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
         <class className="SignController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SignController.h"/>
+            <relationships>
+                <relationship kind="action" name="send:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="signatureView" candidateClass="UIDrawView"/>
+                <relationship kind="outlet" name="swNotifications" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="UIAbroadTypeTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIAbroadTypeTextField.h"/>
+        </class>
+        <class className="UICurrencyTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICurrencyTextField.h"/>
+        </class>
+        <class className="UIDateTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDateTextField.h"/>
+        </class>
+        <class className="UIDomesticTypeTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDomesticTypeTextField.h"/>
+        </class>
+        <class className="UIDrawView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDrawView.h"/>
+        </class>
+        <class className="UIMonthTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIMonthTextField.h"/>
+        </class>
+        <class className="UIProjectCodeTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIProjectCodeTextField.h"/>
+        </class>
+        <class className="UIUnitTextField" superclassName="UITextField">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIUnitTextField.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

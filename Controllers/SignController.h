@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIDrawView.h"
 
 @interface SignController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UISwitch *swNotifications;
+@property (weak, nonatomic) IBOutlet UITextField *txtRemarks;
+@property (weak, nonatomic) IBOutlet UIDrawView *signatureView;
+
+- (IBAction)send:(UIBarButtonItem *)sender;
 
 @end

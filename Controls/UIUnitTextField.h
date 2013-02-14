@@ -1,5 +1,5 @@
 //
-//  PDFViewController.h
+//  UIUnitTextField.h
 //  ExpenseApp
 //
 //  Created by Bert Outtier on 14/02/13.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PDFViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *PdfView;
+@interface UIUnitTextField : UITextField
 
 @end
