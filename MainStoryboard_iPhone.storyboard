@@ -71,12 +71,12 @@
                     <navigationItem key="navigationItem" id="beL-xc-PMP">
                         <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="TPU-fn-eED">
                             <connections>
-                                <action selector="logout:" destination="36q-yD-lX6" id="AxB-R6-YcQ"/>
+                                <action selector="logout:" destination="36q-yD-lX6" id="fQV-Ks-Gq0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="lblWelcome" destination="Ynv-6Q-dJG" id="m7T-d2-nJE"/>
+                        <outlet property="lblWelcome" destination="Ynv-6Q-dJG" id="Qb6-8G-r47"/>
                         <segue destination="PDQ-8W-mwg" kind="modal" identifier="toLoginForm" id="HeD-6W-EXK"/>
                     </connections>
                 </viewController>
@@ -1166,38 +1166,12 @@
     <classes>
         <class className="AbroadController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AbroadController.h"/>
-            <relationships>
-                <relationship kind="action" name="add:" candidateClass="UIButton"/>
-                <relationship kind="action" name="chooseEvidence:" candidateClass="UIButton"/>
-                <relationship kind="action" name="chooseEvidence_iPad:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnChooseEvidence" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="evidenceImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lblAmountEuro" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtCurrency" candidateClass="UICurrencyTextField"/>
-                <relationship kind="outlet" name="txtDate" candidateClass="UIDateTextField"/>
-                <relationship kind="outlet" name="txtProjectCode" candidateClass="UIProjectCodeTextField"/>
-                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtType" candidateClass="UIAbroadTypeTextField"/>
-            </relationships>
         </class>
         <class className="AddOverviewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddOverviewController.h"/>
         </class>
         <class className="DomesticController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DomesticController.h"/>
-            <relationships>
-                <relationship kind="action" name="add:" candidateClass="UIButton"/>
-                <relationship kind="action" name="chooseEvidence:" candidateClass="UIButton"/>
-                <relationship kind="action" name="chooseEvidence_iPad:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="btnChooseEvidence" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="evidenceImageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="txtAmount" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtDate" candidateClass="UIDateTextField"/>
-                <relationship kind="outlet" name="txtProjectCode" candidateClass="UIProjectCodeTextField"/>
-                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtType" candidateClass="UIDomesticTypeTextField"/>
-            </relationships>
         </class>
         <class className="ExpenseFormOverviewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ExpenseFormOverviewController.h"/>
@@ -1211,61 +1185,15 @@
         </class>
         <class className="InfoController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="lblFirstName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lblLastName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="txtDate" candidateClass="UIMonthTextField"/>
-                <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtEmployeeNumber" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtUnit" candidateClass="UIUnitTextField"/>
-            </relationships>
         </class>
         <class className="LoginController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginController.h"/>
-            <relationships>
-                <relationship kind="action" name="login:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="txtEmail" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="txtPassword" candidateClass="UITextField"/>
-            </relationships>
         </class>
         <class className="PDFViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PDFViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="pdfView" candidateClass="UIWebView"/>
-            </relationships>
         </class>
         <class className="SignController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SignController.h"/>
-            <relationships>
-                <relationship kind="action" name="send:" candidateClass="UIBarButtonItem"/>
-                <relationship kind="outlet" name="drawView" candidateClass="UIDrawView"/>
-                <relationship kind="outlet" name="swNotification" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="txtRemarks" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="UIAbroadTypeTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIAbroadTypeTextField.h"/>
-        </class>
-        <class className="UICurrencyTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICurrencyTextField.h"/>
-        </class>
-        <class className="UIDateTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDateTextField.h"/>
-        </class>
-        <class className="UIDomesticTypeTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDomesticTypeTextField.h"/>
-        </class>
-        <class className="UIDrawView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDrawView.h"/>
-        </class>
-        <class className="UIMonthTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIMonthTextField.h"/>
-        </class>
-        <class className="UIProjectCodeTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIProjectCodeTextField.h"/>
-        </class>
-        <class className="UIUnitTextField" superclassName="UITextField">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UIUnitTextField.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
