@@ -18,6 +18,8 @@
 		4CBB190D16CCD4830070A187 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB190C16CCD4830070A187 /* Default@2x.png */; };
 		4CBB190F16CCD4830070A187 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB190E16CCD4830070A187 /* Default-568h@2x.png */; };
 		4CBB191216CCD4830070A187 /* ExpenseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */; };
+		4CBB191A16CCD4E30070A187 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */; };
+		4CBB191B16CCD4E30070A187 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		4CBB190C16CCD4830070A187 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4CBB190E16CCD4830070A187 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4CBB191116CCD4830070A187 /* ExpenseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseApp.xcdatamodel; sourceTree = "<group>"; };
+		4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		4CBB18E716CCD4830070A187 = {
 			isa = PBXGroup;
 			children = (
+				4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */,
+				4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */,
 				4CBB18FE16CCD4830070A187 /* ExpenseApp */,
 				4CBB18F516CCD4830070A187 /* Frameworks */,
 				4CBB18F316CCD4830070A187 /* Products */,
@@ -161,6 +167,8 @@
 				4CBB190B16CCD4830070A187 /* Default.png in Resources */,
 				4CBB190D16CCD4830070A187 /* Default@2x.png in Resources */,
 				4CBB190F16CCD4830070A187 /* Default-568h@2x.png in Resources */,
+				4CBB191A16CCD4E30070A187 /* MainStoryboard_iPad.storyboard in Resources */,
+				4CBB191B16CCD4E30070A187 /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
