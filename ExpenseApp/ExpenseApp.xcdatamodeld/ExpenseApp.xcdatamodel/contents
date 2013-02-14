@@ -26,11 +26,11 @@
         <attribute name="notification" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="remarks" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="signature" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="expenses" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" syncable="YES"/>
+        <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Expense" positionX="160" positionY="192" width="128" height="163"/>
-        <element name="Employee" positionX="151" positionY="-75" width="128" height="163"/>
+        <element name="Expense" positionX="90" positionY="215" width="128" height="163"/>
+        <element name="Employee" positionX="151" positionY="-81" width="128" height="163"/>
         <element name="ExpenseForm" positionX="-173" positionY="-9" width="128" height="133"/>
     </elements>
 </model>

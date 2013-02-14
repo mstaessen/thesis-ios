@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Employee;
+@class Expense;
 
 @interface ExpenseForm : NSManagedObject
 
@@ -18,6 +18,14 @@
 @property (nonatomic, retain) NSNumber * notification;
 @property (nonatomic, retain) NSString * remarks;
 @property (nonatomic, retain) NSNumber * employeeId;
-@property (nonatomic, retain) Employee *expenses;
+@property (nonatomic, retain) NSSet *expenses;
+@end
+
+@interface ExpenseForm (CoreDataGeneratedAccessors)
+
+- (void)addExpensesObject:(Expense *)value;
+- (void)removeExpensesObject:(Expense *)value;
+- (void)addExpenses:(NSSet *)values;
+- (void)removeExpenses:(NSSet *)values;
 
 @end
