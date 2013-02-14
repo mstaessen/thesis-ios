@@ -20,6 +20,9 @@
 		4CBB191216CCD4830070A187 /* ExpenseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */; };
 		4CBB191A16CCD4E30070A187 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */; };
 		4CBB191B16CCD4E30070A187 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */; };
+		4CBB192116CCDC760070A187 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192016CCDC760070A187 /* Employee.m */; };
+		4CBB192416CCDC760070A187 /* ExpenseForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192316CCDC760070A187 /* ExpenseForm.m */; };
+		4CBB192716CCDC760070A187 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192616CCDC760070A187 /* Expense.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,12 @@
 		4CBB191116CCD4830070A187 /* ExpenseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseApp.xcdatamodel; sourceTree = "<group>"; };
 		4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4CBB191F16CCDC760070A187 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = DAL/Employee.h; sourceTree = "<group>"; };
+		4CBB192016CCDC760070A187 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = DAL/Employee.m; sourceTree = "<group>"; };
+		4CBB192216CCDC760070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = DAL/ExpenseForm.h; sourceTree = "<group>"; };
+		4CBB192316CCDC760070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = DAL/ExpenseForm.m; sourceTree = "<group>"; };
+		4CBB192516CCDC760070A187 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = DAL/Expense.h; sourceTree = "<group>"; };
+		4CBB192616CCDC760070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +101,7 @@
 			children = (
 				4CBB190716CCD4830070A187 /* AppDelegate.h */,
 				4CBB190816CCD4830070A187 /* AppDelegate.m */,
-				4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */,
+				4CBB192816CCDC810070A187 /* DAL */,
 				4CBB18FF16CCD4830070A187 /* Supporting Files */,
 			);
 			path = ExpenseApp;
@@ -110,6 +119,20 @@
 				4CBB190E16CCD4830070A187 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CBB192816CCDC810070A187 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */,
+				4CBB192516CCDC760070A187 /* Expense.h */,
+				4CBB192616CCDC760070A187 /* Expense.m */,
+				4CBB192216CCDC760070A187 /* ExpenseForm.h */,
+				4CBB192316CCDC760070A187 /* ExpenseForm.m */,
+				4CBB191F16CCDC760070A187 /* Employee.h */,
+				4CBB192016CCDC760070A187 /* Employee.m */,
+			);
+			name = DAL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +205,9 @@
 				4CBB190516CCD4830070A187 /* main.m in Sources */,
 				4CBB190916CCD4830070A187 /* AppDelegate.m in Sources */,
 				4CBB191216CCD4830070A187 /* ExpenseApp.xcdatamodeld in Sources */,
+				4CBB192116CCDC760070A187 /* Employee.m in Sources */,
+				4CBB192416CCDC760070A187 /* ExpenseForm.m in Sources */,
+				4CBB192716CCDC760070A187 /* Expense.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
