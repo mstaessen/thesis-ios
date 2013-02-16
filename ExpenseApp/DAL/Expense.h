@@ -19,6 +19,6 @@
 @property (nonatomic, retain) NSString * remarks;
 @property (nonatomic, retain) NSString * evidence;
 @property (nonatomic, retain) NSString * currency;
-@property (nonatomic, retain) NSNumber * expenseLocationid;
+@property (nonatomic, retain) NSNumber * expenseLocationId;
 
 @end

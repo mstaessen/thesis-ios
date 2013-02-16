@@ -31,6 +31,22 @@
 	
 }
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear: animated];
+	
+//	try {
+//		if(Backend.isAuthenticated()) {
+//			lblWelcome.Text = "Welcome " + Backend.getFullName () + "!";
+//		} else {
+			[self performSegueWithIdentifier:@"toLoginForm" sender:self];
+//		}
+//	} catch (Exception ex) {
+//		new UIAlertView("Error", ex.Message, null, "ok", null).Show();
+//	}
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

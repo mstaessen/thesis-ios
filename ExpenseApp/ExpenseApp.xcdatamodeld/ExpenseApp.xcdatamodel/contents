@@ -15,7 +15,7 @@
         <attribute name="currency" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="evidence" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="expenseLocationid" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="expenseLocationId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="expenseTypeId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="projectCode" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="remarks" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,9 +28,14 @@
         <attribute name="signature" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="expenses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Expense" syncable="YES"/>
     </entity>
+    <entity name="SavedExpenseForm" representedClassName="SavedExpenseForm" parentEntity="ExpenseForm" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="statusId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Expense" positionX="90" positionY="215" width="128" height="163"/>
         <element name="Employee" positionX="151" positionY="-81" width="128" height="163"/>
-        <element name="ExpenseForm" positionX="-173" positionY="-9" width="128" height="133"/>
+        <element name="ExpenseForm" positionX="-486" positionY="-72" width="128" height="133"/>
+        <element name="SavedExpenseForm" positionX="-180" positionY="-228" width="128" height="73"/>
     </elements>
 </model>

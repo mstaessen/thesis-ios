@@ -18,6 +18,6 @@
 @dynamic remarks;
 @dynamic evidence;
 @dynamic currency;
-@dynamic expenseLocationid;
+@dynamic expenseLocationId;
 
 @end

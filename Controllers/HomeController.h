@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeController : UIViewController <NSFetchedResultsControllerDelegate>
+@interface HomeController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *lblWelcome;
 
 - (IBAction)logout:(UIBarButtonItem *)sender;
 
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end
