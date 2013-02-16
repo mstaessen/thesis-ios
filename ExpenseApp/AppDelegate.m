@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 Bert Outtier. All rights reserved.
 //
 
+#import <RestKit/RestKit.h>
 #import "AppDelegate.h"
 #import "HomeController.h"
+#import "Expense.h"
 
 @implementation AppDelegate
 
@@ -16,12 +18,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-//    return YES;
+{	
 	
 	
 	// Override point for customization after application launch.
@@ -38,6 +35,204 @@
 	    HomeController *controller = (HomeController *)navigationController.topViewController;
 	    controller.managedObjectContext = self.managedObjectContext;
 	}
+	
+	
+	// Initialize RestKit
+    NSURL *baseURL = [NSURL URLWithString:@"http://kulcapexpenseapp.appspot.com/resources"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+	
+    // Enable Activity Indicator Spinner
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+	
+    // Initialize managed object store
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    objectManager.managedObjectStore = managedObjectStore;
+	
+//	NSDictionary* postParams = [NSDictionary dictionaryWithObjectsAndKeys: @"bert.outtier@student.kuleuven.be", @"email",  @"test123", @"password", nil];
+//	[[objectManager HTTPClient] setStringEncoding:<#(NSStringEncoding)#>
+//	[[objectManager HTTPClient] postPath:@"userService/login" parameters:postParams
+//								 success:^(AFHTTPRequestOperation *operation, id responseObject)
+//									{
+//										//reponseObject vs operation.response
+//										NSLog(@"%@", responseObject);
+//									}
+//								 failure:^(AFHTTPRequestOperation *operation, NSError *error)
+//									{
+//										NSLog(@"ERROR: %@", error);
+//									}];
+	 
+	 NSString *post = @"email=bert.outtier@student.kuleuven.be&password=test123";
+	 NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+	 
+	 NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+	 
+	
+	
+	NSError *requestError;
+	NSURLResponse *urlResponse = nil;
+	
+	
+	 NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://kulcapexpenseapp.appspot.com/resources/userService/login"]];
+	 [request setHTTPMethod:@"POST"];
+	 [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+	 [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+	 [request setHTTPBody:postData];
+	
+	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+	NSString *token = [NSString stringWithUTF8String:[data bytes]];
+	
+	if (urlResponse == nil) {
+		// Check for problems
+		if (requestError != nil) {
+			NSLog(@"ERROR : %@", requestError);
+		}
+	}
+	else {
+		// Data was received.. continue processing
+		NSLog(@"Success: %@", token);
+	}
+	 
+	 
+	 
+    // Setup our object mappings
+    /**
+     Mapping by entity. Here we are configuring a mapping by targetting a Core Data entity with a specific
+     name. This allows us to map back Twitter user objects directly onto NSManagedObject instances --
+     there is no backing model class!
+     */
+    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"Employee" inManagedObjectStore:managedObjectStore];
+    userMapping.identificationAttributes = @[ @"userId" ];
+    [userMapping addAttributeMappingsFromDictionary:@{ @"id": @"userId" }];
+    // If source and destination key path are the same, we can simply add a string to the array
+    [userMapping addAttributeMappingsFromArray:@[ @"email" ]];
+	[userMapping addAttributeMappingsFromArray:@[ @"employeeNumber" ]];
+	[userMapping addAttributeMappingsFromArray:@[ @"firstName" ]];
+	[userMapping addAttributeMappingsFromArray:@[ @"lastName" ]];
+	[userMapping addAttributeMappingsFromArray:@[ @"password" ]];
+	[userMapping addAttributeMappingsFromArray:@[ @"unitId" ]];
+	
+	RKEntityMapping *expenseMapping = [RKEntityMapping mappingForEntityForName:@"Expense" inManagedObjectStore:managedObjectStore];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"date" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"amount" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"currency" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"evidence" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseLocationId" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseTypeId" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"projectCode" ]];
+	[expenseMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+	
+	RKEntityMapping *expenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
+	
+	RKEntityMapping *savedExpenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
+	savedExpenseFormMapping.identificationAttributes = @[ @"id" ];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"id" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"statusId" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
+	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
+	
+    // Update date format so that we can parse Twitter dates properly
+	// 2013-02-14T13:44:00.488Z
+    // Wed Sep 29 15:31:08 +0000 2010
+    [RKObjectMapping addDefaultDateFormatterForString:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" inTimeZone:nil];
+	
+	// Serialize to JSON
+	[RKObjectManager sharedManager].requestSerializationMIMEType = RKMIMETypeJSON;
+	
+	
+    // Register our mappings with the provider
+	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping pathPattern:nil keyPath:@"/userService/getEmployee" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+	
+	
+	
+	
+	
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:tweetMapping
+                                                                                       pathPattern:@"/status/user_timeline/:username"
+                                                                                           keyPath:nil
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    [objectManager addResponseDescriptor:responseDescriptor];
+	
+	
+	Expense *exp1 = [Expense init];
+	exp1.currency = @"EUR";
+	exp1.amount = [NSDecimalNumber numberWithFloat:25.57];
+	exp1.evidence = @"a long string";
+	exp1.expenseLocationId = [NSNumber numberWithInteger:1];
+	exp1.expenseTypeId = [NSNumber numberWithInteger:1];
+	exp1.projectCode = @"G20ennogiets";
+	exp1.remarks = @"een remark";
+	
+	
+	
+	
+	
+	
+//
+//    // Uncomment this to use XML, comment it to use JSON
+//    //  objectManager.acceptMIMEType = RKMIMETypeXML;
+//    //  [objectManager.mappingProvider setMapping:statusMapping forKeyPath:@"statuses.status"];
+//    
+//    // Database seeding is configured as a copied target of the main application. There are only two differences
+//    // between the main application target and the 'Generate Seed Database' target:
+//    //  1) RESTKIT_GENERATE_SEED_DB is defined in the 'Preprocessor Macros' section of the build setting for the target
+//    //      This is what triggers the conditional compilation to cause the seed database to be built
+//    //  2) Source JSON files are added to the 'Generate Seed Database' target to be copied into the bundle. This is required
+//    //      so that the object seeder can find the files when run in the simulator.
+//#ifdef RESTKIT_GENERATE_SEED_DB
+//    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelInfo);
+//    RKLogConfigureByName("RestKit/CoreData", RKLogLevelTrace);
+//    
+//    NSError *error;
+//    NSString *seedStorePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"RKSeedDatabase.sqlite"];
+//    RKManagedObjectImporter *importer = [[RKManagedObjectImporter alloc] initWithManagedObjectModel:managedObjectModel storePath:seedStorePath];
+//    [importer importObjectsFromItemAtPath:[[NSBundle mainBundle] pathForResource:@"restkit" ofType:@"json"]
+//                              withMapping:tweetMapping
+//                                  keyPath:nil
+//                                    error:&error];
+//    [importer importObjectsFromItemAtPath:[[NSBundle mainBundle] pathForResource:@"users" ofType:@"json"]
+//                              withMapping:userMapping
+//                                  keyPath:@"user"
+//                                    error:&error];
+//    BOOL success = [importer finishImporting:&error];
+//    if (success) {
+//        [importer logSeedingInfo];
+//    } else {
+//        RKLogError(@"Failed to finish import and save seed database due to error: %@", error);
+//    }
+//	
+//    // Clear out the root view controller
+//    [self.window setRootViewController:[UIViewController new]];
+//#else
+//    /**
+//     Complete Core Data stack initialization
+//     */
+//    [managedObjectStore createPersistentStoreCoordinator];
+//    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"RKTwitter.sqlite"];
+//    NSString *seedPath = [[NSBundle mainBundle] pathForResource:@"RKSeedDatabase" ofType:@"sqlite"];
+//    NSError *error;
+//    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:seedPath withConfiguration:nil options:nil error:&error];
+//    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+//    
+//    // Create the managed object contexts
+//    [managedObjectStore createManagedObjectContexts];
+//    
+//    // Configure a managed object cache to ensure we do not create duplicate objects
+//    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+//#endif
+	
+	
+	
     return YES;
 }
 

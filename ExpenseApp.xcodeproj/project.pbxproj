@@ -20,9 +20,6 @@
 		4CBB191216CCD4830070A187 /* ExpenseApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */; };
 		4CBB191A16CCD4E30070A187 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */; };
 		4CBB191B16CCD4E30070A187 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */; };
-		4CBB192116CCDC760070A187 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192016CCDC760070A187 /* Employee.m */; };
-		4CBB192716CCDC760070A187 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192616CCDC760070A187 /* Expense.m */; };
-		4CBB192B16CCE00F0070A187 /* ExpenseForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192A16CCE00F0070A187 /* ExpenseForm.m */; };
 		4CBB192E16CCE1650070A187 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB192D16CCE1650070A187 /* HomeController.m */; };
 		4CBB193116CCE3330070A187 /* ExpenseFormOverviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */; };
 		4CBB193416CCE3500070A187 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB193316CCE3500070A187 /* LoginController.m */; };
@@ -40,9 +37,51 @@
 		4CBB199816CCF4220070A187 /* UIDomesticTypeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */; };
 		4CBB199C16CCF4730070A187 /* UIMonthTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199B16CCF4730070A187 /* UIMonthTextField.m */; };
 		4CBB199F16CCF4950070A187 /* UIUnitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB199E16CCF4950070A187 /* UIUnitTextField.m */; };
+		4CBB19A316CD055B0070A187 /* EmployeeAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB19A216CD055B0070A187 /* EmployeeAPI.m */; };
+		4CBB19E016CD154D0070A187 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB19DF16CD154D0070A187 /* CFNetwork.framework */; };
+		4CBB19E216CD15690070A187 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB19E116CD15690070A187 /* MobileCoreServices.framework */; };
+		4CBB19E516CD157A0070A187 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB19E316CD15790070A187 /* Security.framework */; };
+		4CBB19E616CD157A0070A187 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB19E416CD15790070A187 /* SystemConfiguration.framework */; };
+		4CBB1A0416CD33070070A187 /* ExpenseForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0316CD33060070A187 /* ExpenseForm.m */; };
+		4CBB1A0716CD33070070A187 /* SavedExpenseForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0616CD33070070A187 /* SavedExpenseForm.m */; };
+		4CBB1A0A16CD33070070A187 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0916CD33070070A187 /* Employee.m */; };
+		4CBB1A0D16CD33070070A187 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0C16CD33070070A187 /* Expense.m */; };
+		4CBB1A1016CE25CF0070A187 /* Expense+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0F16CE25CF0070A187 /* Expense+Util.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4C5AE62516CF9A8E005FC6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		4C5AE62716CF9A8E005FC6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		4C5AE62916CF9A8E005FC6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		4C5AE62B16CF9A8E005FC6F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../../ios/libraries/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		4CBB18F216CCD4830070A187 /* ExpenseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBB18F616CCD4830070A187 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4CBB18F816CCD4830070A187 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,12 +99,6 @@
 		4CBB191116CCD4830070A187 /* ExpenseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseApp.xcdatamodel; sourceTree = "<group>"; };
 		4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		4CBB191F16CCDC760070A187 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = DAL/Employee.h; sourceTree = "<group>"; };
-		4CBB192016CCDC760070A187 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = DAL/Employee.m; sourceTree = "<group>"; };
-		4CBB192516CCDC760070A187 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = DAL/Expense.h; sourceTree = "<group>"; };
-		4CBB192616CCDC760070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
-		4CBB192916CCE00F0070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = DAL/ExpenseForm.h; sourceTree = "<group>"; };
-		4CBB192A16CCE00F0070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = DAL/ExpenseForm.m; sourceTree = "<group>"; };
 		4CBB192C16CCE1650070A187 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
 		4CBB192D16CCE1650070A187 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
 		4CBB192F16CCE3330070A187 /* ExpenseFormOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseFormOverviewController.h; path = Controllers/ExpenseFormOverviewController.h; sourceTree = "<group>"; };
@@ -100,6 +133,22 @@
 		4CBB199B16CCF4730070A187 /* UIMonthTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMonthTextField.m; path = Controls/UIMonthTextField.m; sourceTree = "<group>"; };
 		4CBB199D16CCF4950070A187 /* UIUnitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUnitTextField.h; path = Controls/UIUnitTextField.h; sourceTree = "<group>"; };
 		4CBB199E16CCF4950070A187 /* UIUnitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUnitTextField.m; path = Controls/UIUnitTextField.m; sourceTree = "<group>"; };
+		4CBB19A116CD055B0070A187 /* EmployeeAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmployeeAPI.h; path = SAL/EmployeeAPI.h; sourceTree = "<group>"; };
+		4CBB19A216CD055B0070A187 /* EmployeeAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmployeeAPI.m; path = SAL/EmployeeAPI.m; sourceTree = "<group>"; };
+		4CBB19DF16CD154D0070A187 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4CBB19E116CD15690070A187 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4CBB19E316CD15790070A187 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4CBB19E416CD15790070A187 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4CBB1A0216CD33060070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = DAL/ExpenseForm.h; sourceTree = "<group>"; };
+		4CBB1A0316CD33060070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = DAL/ExpenseForm.m; sourceTree = "<group>"; };
+		4CBB1A0516CD33070070A187 /* SavedExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedExpenseForm.h; path = DAL/SavedExpenseForm.h; sourceTree = "<group>"; };
+		4CBB1A0616CD33070070A187 /* SavedExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedExpenseForm.m; path = DAL/SavedExpenseForm.m; sourceTree = "<group>"; };
+		4CBB1A0816CD33070070A187 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = DAL/Employee.h; sourceTree = "<group>"; };
+		4CBB1A0916CD33070070A187 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = DAL/Employee.m; sourceTree = "<group>"; };
+		4CBB1A0B16CD33070070A187 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = DAL/Expense.h; sourceTree = "<group>"; };
+		4CBB1A0C16CD33070070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
+		4CBB1A0E16CE25CF0070A187 /* Expense+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Expense+Util.h"; path = "DAL/Expense+Util.h"; sourceTree = "<group>"; };
+		4CBB1A0F16CE25CF0070A187 /* Expense+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Expense+Util.m"; path = "DAL/Expense+Util.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,19 +156,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CBB19E516CD157A0070A187 /* Security.framework in Frameworks */,
+				4CBB19E616CD157A0070A187 /* SystemConfiguration.framework in Frameworks */,
+				4CBB19E216CD15690070A187 /* MobileCoreServices.framework in Frameworks */,
+				4CBB18FD16CCD4830070A187 /* CoreData.framework in Frameworks */,
+				4CBB19E016CD154D0070A187 /* CFNetwork.framework in Frameworks */,
 				4CBB18F716CCD4830070A187 /* UIKit.framework in Frameworks */,
 				4CBB18F916CCD4830070A187 /* Foundation.framework in Frameworks */,
 				4CBB18FB16CCD4830070A187 /* CoreGraphics.framework in Frameworks */,
-				4CBB18FD16CCD4830070A187 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C5AE61C16CF9A8D005FC6F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C5AE62616CF9A8E005FC6F2 /* libRestKit.a */,
+				4C5AE62816CF9A8E005FC6F2 /* RestKitTests.octest */,
+				4C5AE62A16CF9A8E005FC6F2 /* RestKit.framework */,
+				4C5AE62C16CF9A8E005FC6F2 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		4CBB18E716CCD4830070A187 = {
 			isa = PBXGroup;
 			children = (
+				4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */,
+				4CBB19E316CD15790070A187 /* Security.framework */,
+				4CBB19E416CD15790070A187 /* SystemConfiguration.framework */,
+				4CBB19E116CD15690070A187 /* MobileCoreServices.framework */,
+				4CBB19DF16CD154D0070A187 /* CFNetwork.framework */,
 				4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */,
 				4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */,
 				4CBB18FE16CCD4830070A187 /* ExpenseApp */,
@@ -150,6 +219,7 @@
 		4CBB18FE16CCD4830070A187 /* ExpenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4CBB19A016CD051E0070A187 /* SAL */,
 				4CBB199916CCF42B0070A187 /* Controls */,
 				4CBB198616CCF2D10070A187 /* UIDrawView.h */,
 				4CBB198716CCF2D10070A187 /* UIDrawView.m */,
@@ -180,12 +250,16 @@
 			isa = PBXGroup;
 			children = (
 				4CBB191016CCD4830070A187 /* ExpenseApp.xcdatamodeld */,
-				4CBB192916CCE00F0070A187 /* ExpenseForm.h */,
-				4CBB192A16CCE00F0070A187 /* ExpenseForm.m */,
-				4CBB192516CCDC760070A187 /* Expense.h */,
-				4CBB192616CCDC760070A187 /* Expense.m */,
-				4CBB191F16CCDC760070A187 /* Employee.h */,
-				4CBB192016CCDC760070A187 /* Employee.m */,
+				4CBB1A0B16CD33070070A187 /* Expense.h */,
+				4CBB1A0C16CD33070070A187 /* Expense.m */,
+				4CBB1A0816CD33070070A187 /* Employee.h */,
+				4CBB1A0916CD33070070A187 /* Employee.m */,
+				4CBB1A0516CD33070070A187 /* SavedExpenseForm.h */,
+				4CBB1A0616CD33070070A187 /* SavedExpenseForm.m */,
+				4CBB1A0216CD33060070A187 /* ExpenseForm.h */,
+				4CBB1A0316CD33060070A187 /* ExpenseForm.m */,
+				4CBB1A0E16CE25CF0070A187 /* Expense+Util.h */,
+				4CBB1A0F16CE25CF0070A187 /* Expense+Util.m */,
 			);
 			name = DAL;
 			sourceTree = "<group>";
@@ -238,6 +312,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		4CBB19A016CD051E0070A187 /* SAL */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB19A116CD055B0070A187 /* EmployeeAPI.h */,
+				4CBB19A216CD055B0070A187 /* EmployeeAPI.m */,
+			);
+			name = SAL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,12 +360,49 @@
 			mainGroup = 4CBB18E716CCD4830070A187;
 			productRefGroup = 4CBB18F316CCD4830070A187 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4C5AE61C16CF9A8D005FC6F2 /* Products */;
+					ProjectRef = 4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4CBB18F116CCD4830070A187 /* ExpenseApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4C5AE62616CF9A8E005FC6F2 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 4C5AE62516CF9A8E005FC6F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4C5AE62816CF9A8E005FC6F2 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 4C5AE62716CF9A8E005FC6F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4C5AE62A16CF9A8E005FC6F2 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 4C5AE62916CF9A8E005FC6F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4C5AE62C16CF9A8E005FC6F2 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 4C5AE62B16CF9A8E005FC6F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4CBB18F016CCD4830070A187 /* Resources */ = {
@@ -308,9 +428,6 @@
 				4CBB190516CCD4830070A187 /* main.m in Sources */,
 				4CBB190916CCD4830070A187 /* AppDelegate.m in Sources */,
 				4CBB191216CCD4830070A187 /* ExpenseApp.xcdatamodeld in Sources */,
-				4CBB192116CCDC760070A187 /* Employee.m in Sources */,
-				4CBB192716CCDC760070A187 /* Expense.m in Sources */,
-				4CBB192B16CCE00F0070A187 /* ExpenseForm.m in Sources */,
 				4CBB192E16CCE1650070A187 /* HomeController.m in Sources */,
 				4CBB193116CCE3330070A187 /* ExpenseFormOverviewController.m in Sources */,
 				4CBB193416CCE3500070A187 /* LoginController.m in Sources */,
@@ -328,6 +445,12 @@
 				4CBB199816CCF4220070A187 /* UIDomesticTypeTextField.m in Sources */,
 				4CBB199C16CCF4730070A187 /* UIMonthTextField.m in Sources */,
 				4CBB199F16CCF4950070A187 /* UIUnitTextField.m in Sources */,
+				4CBB19A316CD055B0070A187 /* EmployeeAPI.m in Sources */,
+				4CBB1A0416CD33070070A187 /* ExpenseForm.m in Sources */,
+				4CBB1A0716CD33070070A187 /* SavedExpenseForm.m in Sources */,
+				4CBB1A0A16CD33070070A187 /* Employee.m in Sources */,
+				4CBB1A0D16CD33070070A187 /* Expense.m in Sources */,
+				4CBB1A1016CE25CF0070A187 /* Expense+Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +524,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpenseApp/ExpenseApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "ExpenseApp/ExpenseApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -412,7 +540,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExpenseApp/ExpenseApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "ExpenseApp/ExpenseApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -437,6 +570,7 @@
 				4CBB191716CCD4830070A187 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
