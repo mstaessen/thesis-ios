@@ -1247,6 +1247,10 @@
         </class>
         <class className="UIDateTextField" superclassName="UITextField">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDateTextField.h"/>
+            <relationships>
+                <relationship kind="action" name="onDateChanged:"/>
+                <relationship kind="action" name="onDoneButtonClicked:"/>
+            </relationships>
         </class>
         <class className="UIDomesticTypeTextField" superclassName="UITextField">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIDomesticTypeTextField.h"/>

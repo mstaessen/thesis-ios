@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIDateTextField : UITextField
+@interface UIDateTextField : UITextField <UITextFieldDelegate>
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MonthPicker.h"
 
-@interface UIMonthTextField : UITextField
+@interface UIMonthTextField : UITextField <UITextFieldDelegate, MonthPickerDelegate>
 
 @end

@@ -44,55 +44,39 @@
     // Enable Activity Indicator Spinner
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 	
-    // Initialize managed object store
-    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    objectManager.managedObjectStore = managedObjectStore;
+//    // Initialize managed object store
+//    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+//    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+//    objectManager.managedObjectStore = managedObjectStore;
 	
-//	NSDictionary* postParams = [NSDictionary dictionaryWithObjectsAndKeys: @"bert.outtier@student.kuleuven.be", @"email",  @"test123", @"password", nil];
-//	[[objectManager HTTPClient] setStringEncoding:<#(NSStringEncoding)#>
-//	[[objectManager HTTPClient] postPath:@"userService/login" parameters:postParams
-//								 success:^(AFHTTPRequestOperation *operation, id responseObject)
-//									{
-//										//reponseObject vs operation.response
-//										NSLog(@"%@", responseObject);
-//									}
-//								 failure:^(AFHTTPRequestOperation *operation, NSError *error)
-//									{
-//										NSLog(@"ERROR: %@", error);
-//									}];
-	 
-	 NSString *post = @"email=bert.outtier@student.kuleuven.be&password=test123";
-	 NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-	 
-	 NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
-	 
+	//Login post request
+//	NSString *post = @"email=bert.outtier@student.kuleuven.be&password=test123";
+//	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+//	NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
+//	 
+//	NSError *requestError;
+//	NSURLResponse *urlResponse = nil;
+//	
+//	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://kulcapexpenseapp.appspot.com/resources/userService/login"]];
+//	[request setHTTPMethod:@"POST"];
+//	[request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//	[request setHTTPBody:postData];
+//	
+//	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+//	NSString *token = [NSString stringWithUTF8String:[data bytes]];
+//	
+//	if (urlResponse == nil) {
+//		if (requestError != nil) {
+//			NSLog(@"ERROR : %@", requestError);
+//		}
+//	}
+//	else {
+//		NSLog(@"Success: %@", token);
+//	}
 	
 	
-	NSError *requestError;
-	NSURLResponse *urlResponse = nil;
-	
-	
-	 NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://kulcapexpenseapp.appspot.com/resources/userService/login"]];
-	 [request setHTTPMethod:@"POST"];
-	 [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-	 [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-	 [request setHTTPBody:postData];
-	
-	NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
-	NSString *token = [NSString stringWithUTF8String:[data bytes]];
-	
-	if (urlResponse == nil) {
-		// Check for problems
-		if (requestError != nil) {
-			NSLog(@"ERROR : %@", requestError);
-		}
-	}
-	else {
-		// Data was received.. continue processing
-		NSLog(@"Success: %@", token);
-	}
-	 
+	// Project code request
 	 
 	 
     // Setup our object mappings
@@ -101,77 +85,77 @@
      name. This allows us to map back Twitter user objects directly onto NSManagedObject instances --
      there is no backing model class!
      */
-    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"Employee" inManagedObjectStore:managedObjectStore];
-    userMapping.identificationAttributes = @[ @"userId" ];
-    [userMapping addAttributeMappingsFromDictionary:@{ @"id": @"userId" }];
-    // If source and destination key path are the same, we can simply add a string to the array
-    [userMapping addAttributeMappingsFromArray:@[ @"email" ]];
-	[userMapping addAttributeMappingsFromArray:@[ @"employeeNumber" ]];
-	[userMapping addAttributeMappingsFromArray:@[ @"firstName" ]];
-	[userMapping addAttributeMappingsFromArray:@[ @"lastName" ]];
-	[userMapping addAttributeMappingsFromArray:@[ @"password" ]];
-	[userMapping addAttributeMappingsFromArray:@[ @"unitId" ]];
-	
-	RKEntityMapping *expenseMapping = [RKEntityMapping mappingForEntityForName:@"Expense" inManagedObjectStore:managedObjectStore];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"date" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"amount" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"currency" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"evidence" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseLocationId" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseTypeId" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"projectCode" ]];
-	[expenseMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
-	
-	RKEntityMapping *expenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
-	
-	RKEntityMapping *savedExpenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
-	savedExpenseFormMapping.identificationAttributes = @[ @"id" ];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"id" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"statusId" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
-	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
-	
-    // Update date format so that we can parse Twitter dates properly
-	// 2013-02-14T13:44:00.488Z
-    // Wed Sep 29 15:31:08 +0000 2010
-    [RKObjectMapping addDefaultDateFormatterForString:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" inTimeZone:nil];
-	
-	// Serialize to JSON
-	[RKObjectManager sharedManager].requestSerializationMIMEType = RKMIMETypeJSON;
-	
-	
-    // Register our mappings with the provider
-	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping pathPattern:nil keyPath:@"/userService/getEmployee" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-	
-	
+//    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"Employee" inManagedObjectStore:managedObjectStore];
+//    userMapping.identificationAttributes = @[ @"userId" ];
+//    [userMapping addAttributeMappingsFromDictionary:@{ @"id": @"userId" }];
+//    // If source and destination key path are the same, we can simply add a string to the array
+//    [userMapping addAttributeMappingsFromArray:@[ @"email" ]];
+//	[userMapping addAttributeMappingsFromArray:@[ @"employeeNumber" ]];
+//	[userMapping addAttributeMappingsFromArray:@[ @"firstName" ]];
+//	[userMapping addAttributeMappingsFromArray:@[ @"lastName" ]];
+//	[userMapping addAttributeMappingsFromArray:@[ @"password" ]];
+//	[userMapping addAttributeMappingsFromArray:@[ @"unitId" ]];
+//	
+//	RKEntityMapping *expenseMapping = [RKEntityMapping mappingForEntityForName:@"Expense" inManagedObjectStore:managedObjectStore];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"date" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"amount" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"currency" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"evidence" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseLocationId" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"expenseTypeId" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"projectCode" ]];
+//	[expenseMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+//	
+//	RKEntityMapping *expenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
+//	
+//	RKEntityMapping *savedExpenseFormMapping = [RKEntityMapping mappingForEntityForName:@"ExpenseForm" inManagedObjectStore:managedObjectStore];
+//	savedExpenseFormMapping.identificationAttributes = @[ @"id" ];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"id" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"date" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"statusId" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"employeeId" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"notification" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"remarks" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"signature" ]];
+//	[expenseFormMapping addAttributeMappingsFromArray:@[ @"expenses" ]];
+//	
+//    // Update date format so that we can parse Twitter dates properly
+//	// 2013-02-14T13:44:00.488Z
+//    // Wed Sep 29 15:31:08 +0000 2010
+//    [RKObjectMapping addDefaultDateFormatterForString:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" inTimeZone:nil];
+//	
+//	// Serialize to JSON
+//	[RKObjectManager sharedManager].requestSerializationMIMEType = RKMIMETypeJSON;
+//	
+//	
+//    // Register our mappings with the provider
+//	RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping pathPattern:nil keyPath:@"/userService/getEmployee" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 	
 	
 	
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:tweetMapping
-                                                                                       pathPattern:@"/status/user_timeline/:username"
-                                                                                           keyPath:nil
-                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    [objectManager addResponseDescriptor:responseDescriptor];
 	
 	
-	Expense *exp1 = [Expense init];
-	exp1.currency = @"EUR";
-	exp1.amount = [NSDecimalNumber numberWithFloat:25.57];
-	exp1.evidence = @"a long string";
-	exp1.expenseLocationId = [NSNumber numberWithInteger:1];
-	exp1.expenseTypeId = [NSNumber numberWithInteger:1];
-	exp1.projectCode = @"G20ennogiets";
-	exp1.remarks = @"een remark";
+//    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:tweetMapping
+//                                                                                       pathPattern:@"/status/user_timeline/:username"
+//                                                                                           keyPath:nil
+//                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+//    [objectManager addResponseDescriptor:responseDescriptor];
+	
+	
+//	Expense *exp1 = [[Expense alloc] init];
+//	exp1.currency = @"EUR";
+//	exp1.amount = [NSDecimalNumber numberWithFloat:25.57];
+//	exp1.evidence = @"a long string";
+//	exp1.expenseLocationId = [NSNumber numberWithInteger:1];
+//	exp1.expenseTypeId = [NSNumber numberWithInteger:1];
+//	exp1.projectCode = @"G20ennogiets";
+//	exp1.remarks = @"een remark";
 	
 	
 	
