@@ -54,6 +54,7 @@ NSManagedObjectContext *context;
 		_lblLastName.text = [user lastName];
 		_txtEmail.text = [user email];
 		_txtEmployeeNumber.text = [NSString stringWithFormat:@"%@", [user employeeNumber]];
+		_txtUnit.unit = [[user unitId] intValue];
 	}
 	else{
 		NSLog(@"There should be a user logged in %@, %@", error, [error userInfo]);

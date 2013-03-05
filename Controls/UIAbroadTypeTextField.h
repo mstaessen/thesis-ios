@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AbroadTypePicker.h"
 
-@interface UIAbroadTypeTextField : UITextField
-
+@interface UIAbroadTypeTextField : UITextField <AbroadTypePickerDelegate, UITextFieldDelegate>
+@property (nonatomic) int type;
 @end

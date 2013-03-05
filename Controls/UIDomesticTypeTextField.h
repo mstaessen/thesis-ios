@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DomesticTypePicker.h"
 
-@interface UIDomesticTypeTextField : UITextField
-
+@interface UIDomesticTypeTextField : UITextField <DomesticTypePickerDelegate, UITextFieldDelegate>
+@property (nonatomic) int type;
 @end

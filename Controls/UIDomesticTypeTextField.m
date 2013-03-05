@@ -7,25 +7,75 @@
 //
 
 #import "UIDomesticTypeTextField.h"
+#import "DomesticTypePicker.h"
+
+@interface UIDomesticTypeTextField ()
+@property (nonatomic, retain, readwrite) DomesticTypePicker *typePicker;
+@end
 
 @implementation UIDomesticTypeTextField
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize type = _type;
+
+- (void) setType:(int) type
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+	_type = type;
+	[_typePicker setType:type];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+-(id) initWithCoder:(NSCoder *)aDecoder{
+	if ((self = [super initWithCoder:aDecoder]))
+	{
+		self.delegate = self;
+		
+		// Initialization code
+		_typePicker = [[DomesticTypePicker alloc] init:self];
+		
+		// Setup the dateToolbar
+		UIToolbar *dateToolbar = [[UIToolbar alloc] init];
+		dateToolbar.barStyle = UIBarStyleBlack;
+		dateToolbar.Translucent = true;
+		[dateToolbar sizeToFit];
+		
+		// Create a 'done' button for the dateToolbar
+		UIBarButtonItem* dateDoneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(onDoneButtonClicked:)];
+		
+		// Create flexible space
+		UIBarButtonItem* dateFlex = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+		
+		// Add button and dateFlexible space to the dateToolbar
+		[dateToolbar setItems:[NSArray arrayWithObjects:dateFlex, dateDoneButton, nil] animated:true];
+		
+		self.inputView = _typePicker;
+		self.inputAccessoryView = dateToolbar;
+	}
+	
+	return self;
 }
-*/
+
+- (void) textFieldDidBeginEditing:(UITextField *)textField {
+    [_typePicker setType:_type];
+}
+
+- (void)didSelectType:(int)type withName:(NSString *)name
+{
+	self.text = name;
+	_type = type;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	textField.text = _typePicker.typeName;
+	_type = _typePicker.type;
+	
+	[textField resignFirstResponder];
+    return TRUE;
+}
+
+- (IBAction)onDoneButtonClicked: (id) sender {
+	self.text = _typePicker.typeName;
+	_type = _typePicker.type;
+	[self resignFirstResponder];
+}
 
 @end

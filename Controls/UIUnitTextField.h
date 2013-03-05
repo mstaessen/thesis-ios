@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UnitPicker.h"
 
-@interface UIUnitTextField : UITextField
-
+@interface UIUnitTextField : UITextField <UnitPickerDelegate, UITextFieldDelegate>
+@property (nonatomic) int unit;
 @end

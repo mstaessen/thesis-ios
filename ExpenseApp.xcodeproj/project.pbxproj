@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C09840716E5EA6900D537A7 /* DomesticTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */; };
+		4C09840D16E5EF3100D537A7 /* AbroadTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */; };
+		4C09841016E5F07C00D537A7 /* CurrencyPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */; };
 		4C5AE63716CFAB21005FC6F2 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5AE62616CF9A8E005FC6F2 /* libRestKit.a */; };
 		4CBB18F716CCD4830070A187 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB18F616CCD4830070A187 /* UIKit.framework */; };
 		4CBB18F916CCD4830070A187 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB18F816CCD4830070A187 /* Foundation.framework */; };
@@ -47,6 +50,7 @@
 		4CBB1A0A16CD33070070A187 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0916CD33070070A187 /* Employee.m */; };
 		4CBB1A0D16CD33070070A187 /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBB1A0C16CD33070070A187 /* Expense.m */; };
 		4CDA33CC16E4BE2E00D42877 /* MonthPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA33CB16E4BE2E00D42877 /* MonthPicker.m */; };
+		4CDA33CF16E515E800D42877 /* UnitPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDA33CE16E515E800D42877 /* UnitPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C09840516E5EA6900D537A7 /* DomesticTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticTypePicker.h; path = Pickers/DomesticTypePicker.h; sourceTree = "<group>"; };
+		4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticTypePicker.m; path = Pickers/DomesticTypePicker.m; sourceTree = "<group>"; };
+		4C09840B16E5EF3000D537A7 /* AbroadTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadTypePicker.h; path = Pickers/AbroadTypePicker.h; sourceTree = "<group>"; };
+		4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadTypePicker.m; path = Pickers/AbroadTypePicker.m; sourceTree = "<group>"; };
+		4C09840E16E5F07C00D537A7 /* CurrencyPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyPicker.h; path = Pickers/CurrencyPicker.h; sourceTree = "<group>"; };
+		4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyPicker.m; path = Pickers/CurrencyPicker.m; sourceTree = "<group>"; };
 		4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../../ios/libraries/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		4CBB18F216CCD4830070A187 /* ExpenseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBB18F616CCD4830070A187 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -154,6 +164,8 @@
 		4CBB1A0C16CD33070070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
 		4CDA33CA16E4BE2E00D42877 /* MonthPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonthPicker.h; path = Pickers/MonthPicker.h; sourceTree = "<group>"; };
 		4CDA33CB16E4BE2E00D42877 /* MonthPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonthPicker.m; path = Pickers/MonthPicker.m; sourceTree = "<group>"; };
+		4CDA33CD16E515E800D42877 /* UnitPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitPicker.h; path = Pickers/UnitPicker.h; sourceTree = "<group>"; };
+		4CDA33CE16E515E800D42877 /* UnitPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitPicker.m; path = Pickers/UnitPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +349,14 @@
 			children = (
 				4CDA33CA16E4BE2E00D42877 /* MonthPicker.h */,
 				4CDA33CB16E4BE2E00D42877 /* MonthPicker.m */,
+				4CDA33CD16E515E800D42877 /* UnitPicker.h */,
+				4CDA33CE16E515E800D42877 /* UnitPicker.m */,
+				4C09840516E5EA6900D537A7 /* DomesticTypePicker.h */,
+				4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */,
+				4C09840B16E5EF3000D537A7 /* AbroadTypePicker.h */,
+				4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */,
+				4C09840E16E5F07C00D537A7 /* CurrencyPicker.h */,
+				4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */,
 			);
 			name = pickers;
 			sourceTree = "<group>";
@@ -471,6 +491,10 @@
 				4CBB1A0A16CD33070070A187 /* Employee.m in Sources */,
 				4CBB1A0D16CD33070070A187 /* Expense.m in Sources */,
 				4CDA33CC16E4BE2E00D42877 /* MonthPicker.m in Sources */,
+				4CDA33CF16E515E800D42877 /* UnitPicker.m in Sources */,
+				4C09840716E5EA6900D537A7 /* DomesticTypePicker.m in Sources */,
+				4C09840D16E5EF3100D537A7 /* AbroadTypePicker.m in Sources */,
+				4C09841016E5F07C00D537A7 /* CurrencyPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
