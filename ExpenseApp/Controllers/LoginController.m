@@ -1,18 +1,22 @@
 //
-//  DomesticController.m
+//  LoginController.m
 //  ExpenseApp
 //
 //  Created by Bert Outtier on 14/02/13.
 //  Copyright (c) 2013 Bert Outtier. All rights reserved.
 //
 
-#import "DomesticController.h"
+#import <RestKit/RestKit.h>
+#import "LoginController.h"
+#import "Employee.h"
+#import "AppDelegate.h"
+#import "Backend.h"
 
-@interface DomesticController ()
+@interface LoginController ()
 
 @end
 
-@implementation DomesticController
+@implementation LoginController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,9 +46,17 @@
 
 #pragma mark - Table view delegate
 
-- (IBAction)btnChooseEvidence:(UIButton *)sender {
+- (IBAction)login:(UIButton *)sender {
+	
+	NSLog(@"email: %@ password: %@", _txtEmail.text, _txtPassword.text);
+	
+	[Backend setDelegate:self];
+	[Backend login:_txtEmail.text password:_txtPassword.text];
 }
 
-- (IBAction)add:(UIButton *)sender {
+- (void)didLogIn:(Employee *)user
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

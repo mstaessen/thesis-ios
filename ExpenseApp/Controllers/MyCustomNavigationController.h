@@ -1,5 +1,5 @@
 //
-//  CurrencyPicker.h
+//  MyCustomNavigationController.h
 //  ExpenseApp
 //
 //  Created by Bert Outtier on 5/03/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CurrencyPicker : UIPickerView
+@interface MyCustomNavigationController : UINavigationController
 
 @end

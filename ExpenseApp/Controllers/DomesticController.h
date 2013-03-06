@@ -11,7 +11,7 @@
 #import "UIProjectCodeTextField.h"
 #import "UIDomesticTypeTextField.h"
 
-@interface DomesticController : UITableViewController
+@interface DomesticController : UITableViewController <UIImagePickerControllerDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIDateTextField *txtDate;
 @property (weak, nonatomic) IBOutlet UIProjectCodeTextField *txtProjectCode;
 @property (weak, nonatomic) IBOutlet UIDomesticTypeTextField *txtType;

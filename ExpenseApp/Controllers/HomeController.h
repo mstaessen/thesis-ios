@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Backend.h"
 
-@interface HomeController : UIViewController
+@interface HomeController : UIViewController <BackendDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *lblWelcome;
 

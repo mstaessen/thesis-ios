@@ -10,6 +10,14 @@
 		4C09840716E5EA6900D537A7 /* DomesticTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */; };
 		4C09840D16E5EF3100D537A7 /* AbroadTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */; };
 		4C09841016E5F07C00D537A7 /* CurrencyPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */; };
+		4C09841316E5F85700D537A7 /* ProjectPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09841216E5F85700D537A7 /* ProjectPicker.m */; };
+		4C09841D16E6275700D537A7 /* MyCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09841C16E6275700D537A7 /* MyCustomNavigationController.m */; };
+		4C09841F16E62DF400D537A7 /* clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C09841E16E62DF400D537A7 /* clear.png */; };
+		4C09842316E6598800D537A7 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09842216E6598800D537A7 /* NSData+Base64.m */; };
+		4C09842A16E65F1000D537A7 /* Backend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09842916E65F1000D537A7 /* Backend.m */; };
+		4C09842E16E664B900D537A7 /* EmployeeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C09842D16E664B900D537A7 /* EmployeeManager.m */; };
+		4C42D3ED16E76131001CAB48 /* ExpenseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C42D3EC16E76130001CAB48 /* ExpenseManager.m */; };
+		4C42D3F316E76F4F001CAB48 /* ExpenseFormManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C42D3F216E76F4E001CAB48 /* ExpenseFormManager.m */; };
 		4C5AE63716CFAB21005FC6F2 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C5AE62616CF9A8E005FC6F2 /* libRestKit.a */; };
 		4CBB18F716CCD4830070A187 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB18F616CCD4830070A187 /* UIKit.framework */; };
 		4CBB18F916CCD4830070A187 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBB18F816CCD4830070A187 /* Foundation.framework */; };
@@ -92,12 +100,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C09840516E5EA6900D537A7 /* DomesticTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticTypePicker.h; path = Pickers/DomesticTypePicker.h; sourceTree = "<group>"; };
-		4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticTypePicker.m; path = Pickers/DomesticTypePicker.m; sourceTree = "<group>"; };
-		4C09840B16E5EF3000D537A7 /* AbroadTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadTypePicker.h; path = Pickers/AbroadTypePicker.h; sourceTree = "<group>"; };
-		4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadTypePicker.m; path = Pickers/AbroadTypePicker.m; sourceTree = "<group>"; };
-		4C09840E16E5F07C00D537A7 /* CurrencyPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyPicker.h; path = Pickers/CurrencyPicker.h; sourceTree = "<group>"; };
-		4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyPicker.m; path = Pickers/CurrencyPicker.m; sourceTree = "<group>"; };
+		4C09840516E5EA6900D537A7 /* DomesticTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticTypePicker.h; path = ExpenseApp/Controls/Pickers/DomesticTypePicker.h; sourceTree = "<group>"; };
+		4C09840616E5EA6900D537A7 /* DomesticTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticTypePicker.m; path = ExpenseApp/Controls/Pickers/DomesticTypePicker.m; sourceTree = "<group>"; };
+		4C09840B16E5EF3000D537A7 /* AbroadTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadTypePicker.h; path = ExpenseApp/Controls/Pickers/AbroadTypePicker.h; sourceTree = "<group>"; };
+		4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadTypePicker.m; path = ExpenseApp/Controls/Pickers/AbroadTypePicker.m; sourceTree = "<group>"; };
+		4C09840E16E5F07C00D537A7 /* CurrencyPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CurrencyPicker.h; path = ExpenseApp/Controls/Pickers/CurrencyPicker.h; sourceTree = "<group>"; };
+		4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CurrencyPicker.m; path = ExpenseApp/Controls/Pickers/CurrencyPicker.m; sourceTree = "<group>"; };
+		4C09841116E5F85700D537A7 /* ProjectPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProjectPicker.h; path = ExpenseApp/Controls/Pickers/ProjectPicker.h; sourceTree = "<group>"; };
+		4C09841216E5F85700D537A7 /* ProjectPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProjectPicker.m; path = ExpenseApp/Controls/Pickers/ProjectPicker.m; sourceTree = "<group>"; };
+		4C09841B16E6275700D537A7 /* MyCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomNavigationController.h; path = ExpenseApp/Controllers/MyCustomNavigationController.h; sourceTree = "<group>"; };
+		4C09841C16E6275700D537A7 /* MyCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCustomNavigationController.m; path = ExpenseApp/Controllers/MyCustomNavigationController.m; sourceTree = "<group>"; };
+		4C09841E16E62DF400D537A7 /* clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clear.png; sourceTree = "<group>"; };
+		4C09842116E6598800D537A7 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "ExpenseApp/Utils/NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
+		4C09842216E6598800D537A7 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "ExpenseApp/Utils/NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
+		4C09842816E65F1000D537A7 /* Backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Backend.h; path = Core/BL/Backend.h; sourceTree = "<group>"; };
+		4C09842916E65F1000D537A7 /* Backend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Backend.m; path = Core/BL/Backend.m; sourceTree = "<group>"; };
+		4C09842C16E664B900D537A7 /* EmployeeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EmployeeManager.h; path = Core/BL/Managers/EmployeeManager.h; sourceTree = "<group>"; };
+		4C09842D16E664B900D537A7 /* EmployeeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EmployeeManager.m; path = Core/BL/Managers/EmployeeManager.m; sourceTree = "<group>"; };
+		4C42D3EB16E76130001CAB48 /* ExpenseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseManager.h; path = Core/BL/Managers/ExpenseManager.h; sourceTree = "<group>"; };
+		4C42D3EC16E76130001CAB48 /* ExpenseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseManager.m; path = Core/BL/Managers/ExpenseManager.m; sourceTree = "<group>"; };
+		4C42D3F116E76F4E001CAB48 /* ExpenseFormManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseFormManager.h; path = Core/BL/Managers/ExpenseFormManager.h; sourceTree = "<group>"; };
+		4C42D3F216E76F4E001CAB48 /* ExpenseFormManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseFormManager.m; path = Core/BL/Managers/ExpenseFormManager.m; sourceTree = "<group>"; };
 		4C5AE61B16CF9A8D005FC6F2 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../../ios/libraries/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		4CBB18F216CCD4830070A187 /* ExpenseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpenseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBB18F616CCD4830070A187 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -116,56 +139,56 @@
 		4CBB191116CCD4830070A187 /* ExpenseApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseApp.xcdatamodel; sourceTree = "<group>"; };
 		4CBB191816CCD4E30070A187 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		4CBB191916CCD4E30070A187 /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		4CBB192C16CCE1650070A187 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = Controllers/HomeController.h; sourceTree = "<group>"; };
-		4CBB192D16CCE1650070A187 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = Controllers/HomeController.m; sourceTree = "<group>"; };
-		4CBB192F16CCE3330070A187 /* ExpenseFormOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseFormOverviewController.h; path = Controllers/ExpenseFormOverviewController.h; sourceTree = "<group>"; };
-		4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseFormOverviewController.m; path = Controllers/ExpenseFormOverviewController.m; sourceTree = "<group>"; };
-		4CBB193216CCE3500070A187 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController.h; sourceTree = "<group>"; };
-		4CBB193316CCE3500070A187 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = Controllers/LoginController.m; sourceTree = "<group>"; };
-		4CBB193516CCE3760070A187 /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFViewController.h; path = Controllers/PDFViewController.h; sourceTree = "<group>"; };
-		4CBB193616CCE3760070A187 /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFViewController.m; path = Controllers/PDFViewController.m; sourceTree = "<group>"; };
-		4CBB193816CCE3970070A187 /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoController.h; path = Controllers/InfoController.h; sourceTree = "<group>"; };
-		4CBB193916CCE3970070A187 /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoController.m; path = Controllers/InfoController.m; sourceTree = "<group>"; };
-		4CBB193B16CCE3B20070A187 /* AddOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddOverviewController.h; path = Controllers/AddOverviewController.h; sourceTree = "<group>"; };
-		4CBB193C16CCE3B20070A187 /* AddOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddOverviewController.m; path = Controllers/AddOverviewController.m; sourceTree = "<group>"; };
-		4CBB193E16CCE3D20070A187 /* DomesticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticController.h; path = Controllers/DomesticController.h; sourceTree = "<group>"; };
-		4CBB193F16CCE3D20070A187 /* DomesticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticController.m; path = Controllers/DomesticController.m; sourceTree = "<group>"; };
-		4CBB194116CCE3EB0070A187 /* AbroadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadController.h; path = Controllers/AbroadController.h; sourceTree = "<group>"; };
-		4CBB194216CCE3EB0070A187 /* AbroadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadController.m; path = Controllers/AbroadController.m; sourceTree = "<group>"; };
-		4CBB194416CCE41C0070A187 /* SignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignController.h; path = Controllers/SignController.h; sourceTree = "<group>"; };
-		4CBB194516CCE41C0070A187 /* SignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignController.m; path = Controllers/SignController.m; sourceTree = "<group>"; };
-		4CBB198616CCF2D10070A187 /* UIDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDrawView.h; path = ../Controls/UIDrawView.h; sourceTree = "<group>"; };
-		4CBB198716CCF2D10070A187 /* UIDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDrawView.m; path = ../Controls/UIDrawView.m; sourceTree = "<group>"; };
-		4CBB198916CCF3AF0070A187 /* UIDateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDateTextField.h; path = Controls/UIDateTextField.h; sourceTree = "<group>"; };
-		4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDateTextField.m; path = Controls/UIDateTextField.m; sourceTree = "<group>"; };
-		4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIProjectCodeTextField.h; path = Controls/UIProjectCodeTextField.h; sourceTree = "<group>"; };
-		4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIProjectCodeTextField.m; path = Controls/UIProjectCodeTextField.m; sourceTree = "<group>"; };
-		4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAbroadTypeTextField.h; path = Controls/UIAbroadTypeTextField.h; sourceTree = "<group>"; };
-		4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAbroadTypeTextField.m; path = Controls/UIAbroadTypeTextField.m; sourceTree = "<group>"; };
-		4CBB199316CCF4010070A187 /* UICurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICurrencyTextField.h; path = Controls/UICurrencyTextField.h; sourceTree = "<group>"; };
-		4CBB199416CCF4010070A187 /* UICurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICurrencyTextField.m; path = Controls/UICurrencyTextField.m; sourceTree = "<group>"; };
-		4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDomesticTypeTextField.h; path = Controls/UIDomesticTypeTextField.h; sourceTree = "<group>"; };
-		4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDomesticTypeTextField.m; path = Controls/UIDomesticTypeTextField.m; sourceTree = "<group>"; };
-		4CBB199A16CCF4730070A187 /* UIMonthTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMonthTextField.h; path = Controls/UIMonthTextField.h; sourceTree = "<group>"; };
-		4CBB199B16CCF4730070A187 /* UIMonthTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMonthTextField.m; path = Controls/UIMonthTextField.m; sourceTree = "<group>"; };
-		4CBB199D16CCF4950070A187 /* UIUnitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUnitTextField.h; path = Controls/UIUnitTextField.h; sourceTree = "<group>"; };
-		4CBB199E16CCF4950070A187 /* UIUnitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUnitTextField.m; path = Controls/UIUnitTextField.m; sourceTree = "<group>"; };
+		4CBB192C16CCE1650070A187 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeController.h; path = ExpenseApp/Controllers/HomeController.h; sourceTree = "<group>"; };
+		4CBB192D16CCE1650070A187 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeController.m; path = ExpenseApp/Controllers/HomeController.m; sourceTree = "<group>"; };
+		4CBB192F16CCE3330070A187 /* ExpenseFormOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseFormOverviewController.h; path = ExpenseApp/Controllers/ExpenseFormOverviewController.h; sourceTree = "<group>"; };
+		4CBB193016CCE3330070A187 /* ExpenseFormOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseFormOverviewController.m; path = ExpenseApp/Controllers/ExpenseFormOverviewController.m; sourceTree = "<group>"; };
+		4CBB193216CCE3500070A187 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = ExpenseApp/Controllers/LoginController.h; sourceTree = "<group>"; };
+		4CBB193316CCE3500070A187 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = ExpenseApp/Controllers/LoginController.m; sourceTree = "<group>"; };
+		4CBB193516CCE3760070A187 /* PDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDFViewController.h; path = ExpenseApp/Controllers/PDFViewController.h; sourceTree = "<group>"; };
+		4CBB193616CCE3760070A187 /* PDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDFViewController.m; path = ExpenseApp/Controllers/PDFViewController.m; sourceTree = "<group>"; };
+		4CBB193816CCE3970070A187 /* InfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfoController.h; path = ExpenseApp/Controllers/InfoController.h; sourceTree = "<group>"; };
+		4CBB193916CCE3970070A187 /* InfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfoController.m; path = ExpenseApp/Controllers/InfoController.m; sourceTree = "<group>"; };
+		4CBB193B16CCE3B20070A187 /* AddOverviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddOverviewController.h; path = ExpenseApp/Controllers/AddOverviewController.h; sourceTree = "<group>"; };
+		4CBB193C16CCE3B20070A187 /* AddOverviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddOverviewController.m; path = ExpenseApp/Controllers/AddOverviewController.m; sourceTree = "<group>"; };
+		4CBB193E16CCE3D20070A187 /* DomesticController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DomesticController.h; path = ExpenseApp/Controllers/DomesticController.h; sourceTree = "<group>"; };
+		4CBB193F16CCE3D20070A187 /* DomesticController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DomesticController.m; path = ExpenseApp/Controllers/DomesticController.m; sourceTree = "<group>"; };
+		4CBB194116CCE3EB0070A187 /* AbroadController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AbroadController.h; path = ExpenseApp/Controllers/AbroadController.h; sourceTree = "<group>"; };
+		4CBB194216CCE3EB0070A187 /* AbroadController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AbroadController.m; path = ExpenseApp/Controllers/AbroadController.m; sourceTree = "<group>"; };
+		4CBB194416CCE41C0070A187 /* SignController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignController.h; path = ExpenseApp/Controllers/SignController.h; sourceTree = "<group>"; };
+		4CBB194516CCE41C0070A187 /* SignController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignController.m; path = ExpenseApp/Controllers/SignController.m; sourceTree = "<group>"; };
+		4CBB198616CCF2D10070A187 /* UIDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDrawView.h; path = ExpenseApp/Controls/UIDrawView.h; sourceTree = "<group>"; };
+		4CBB198716CCF2D10070A187 /* UIDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDrawView.m; path = ExpenseApp/Controls/UIDrawView.m; sourceTree = "<group>"; };
+		4CBB198916CCF3AF0070A187 /* UIDateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDateTextField.h; path = ExpenseApp/Controls/TextFields/UIDateTextField.h; sourceTree = "<group>"; };
+		4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDateTextField.m; path = ExpenseApp/Controls/TextFields/UIDateTextField.m; sourceTree = "<group>"; };
+		4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIProjectCodeTextField.h; path = ExpenseApp/Controls/TextFields/UIProjectCodeTextField.h; sourceTree = "<group>"; };
+		4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIProjectCodeTextField.m; path = ExpenseApp/Controls/TextFields/UIProjectCodeTextField.m; sourceTree = "<group>"; };
+		4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIAbroadTypeTextField.h; path = ExpenseApp/Controls/TextFields/UIAbroadTypeTextField.h; sourceTree = "<group>"; };
+		4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIAbroadTypeTextField.m; path = ExpenseApp/Controls/TextFields/UIAbroadTypeTextField.m; sourceTree = "<group>"; };
+		4CBB199316CCF4010070A187 /* UICurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UICurrencyTextField.h; path = ExpenseApp/Controls/TextFields/UICurrencyTextField.h; sourceTree = "<group>"; };
+		4CBB199416CCF4010070A187 /* UICurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UICurrencyTextField.m; path = ExpenseApp/Controls/TextFields/UICurrencyTextField.m; sourceTree = "<group>"; };
+		4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIDomesticTypeTextField.h; path = ExpenseApp/Controls/TextFields/UIDomesticTypeTextField.h; sourceTree = "<group>"; };
+		4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIDomesticTypeTextField.m; path = ExpenseApp/Controls/TextFields/UIDomesticTypeTextField.m; sourceTree = "<group>"; };
+		4CBB199A16CCF4730070A187 /* UIMonthTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIMonthTextField.h; path = ExpenseApp/Controls/TextFields/UIMonthTextField.h; sourceTree = "<group>"; };
+		4CBB199B16CCF4730070A187 /* UIMonthTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIMonthTextField.m; path = ExpenseApp/Controls/TextFields/UIMonthTextField.m; sourceTree = "<group>"; };
+		4CBB199D16CCF4950070A187 /* UIUnitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIUnitTextField.h; path = ExpenseApp/Controls/TextFields/UIUnitTextField.h; sourceTree = "<group>"; };
+		4CBB199E16CCF4950070A187 /* UIUnitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIUnitTextField.m; path = ExpenseApp/Controls/TextFields/UIUnitTextField.m; sourceTree = "<group>"; };
 		4CBB19DF16CD154D0070A187 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4CBB19E116CD15690070A187 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4CBB19E316CD15790070A187 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4CBB19E416CD15790070A187 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4CBB1A0216CD33060070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = DAL/ExpenseForm.h; sourceTree = "<group>"; };
-		4CBB1A0316CD33060070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = DAL/ExpenseForm.m; sourceTree = "<group>"; };
-		4CBB1A0516CD33070070A187 /* SavedExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedExpenseForm.h; path = DAL/SavedExpenseForm.h; sourceTree = "<group>"; };
-		4CBB1A0616CD33070070A187 /* SavedExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedExpenseForm.m; path = DAL/SavedExpenseForm.m; sourceTree = "<group>"; };
-		4CBB1A0816CD33070070A187 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = DAL/Employee.h; sourceTree = "<group>"; };
-		4CBB1A0916CD33070070A187 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = DAL/Employee.m; sourceTree = "<group>"; };
-		4CBB1A0B16CD33070070A187 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = DAL/Expense.h; sourceTree = "<group>"; };
-		4CBB1A0C16CD33070070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = DAL/Expense.m; sourceTree = "<group>"; };
-		4CDA33CA16E4BE2E00D42877 /* MonthPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonthPicker.h; path = Pickers/MonthPicker.h; sourceTree = "<group>"; };
-		4CDA33CB16E4BE2E00D42877 /* MonthPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonthPicker.m; path = Pickers/MonthPicker.m; sourceTree = "<group>"; };
-		4CDA33CD16E515E800D42877 /* UnitPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitPicker.h; path = Pickers/UnitPicker.h; sourceTree = "<group>"; };
-		4CDA33CE16E515E800D42877 /* UnitPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitPicker.m; path = Pickers/UnitPicker.m; sourceTree = "<group>"; };
+		4CBB1A0216CD33060070A187 /* ExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseForm.h; path = Core/DAL/ExpenseForm.h; sourceTree = "<group>"; };
+		4CBB1A0316CD33060070A187 /* ExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseForm.m; path = Core/DAL/ExpenseForm.m; sourceTree = "<group>"; };
+		4CBB1A0516CD33070070A187 /* SavedExpenseForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavedExpenseForm.h; path = Core/DAL/SavedExpenseForm.h; sourceTree = "<group>"; };
+		4CBB1A0616CD33070070A187 /* SavedExpenseForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SavedExpenseForm.m; path = Core/DAL/SavedExpenseForm.m; sourceTree = "<group>"; };
+		4CBB1A0816CD33070070A187 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = Core/DAL/Employee.h; sourceTree = "<group>"; };
+		4CBB1A0916CD33070070A187 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = Core/DAL/Employee.m; sourceTree = "<group>"; };
+		4CBB1A0B16CD33070070A187 /* Expense.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Expense.h; path = Core/DAL/Expense.h; sourceTree = "<group>"; };
+		4CBB1A0C16CD33070070A187 /* Expense.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Expense.m; path = Core/DAL/Expense.m; sourceTree = "<group>"; };
+		4CDA33CA16E4BE2E00D42877 /* MonthPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MonthPicker.h; path = ExpenseApp/Controls/Pickers/MonthPicker.h; sourceTree = "<group>"; };
+		4CDA33CB16E4BE2E00D42877 /* MonthPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MonthPicker.m; path = ExpenseApp/Controls/Pickers/MonthPicker.m; sourceTree = "<group>"; };
+		4CDA33CD16E515E800D42877 /* UnitPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UnitPicker.h; path = ExpenseApp/Controls/Pickers/UnitPicker.h; sourceTree = "<group>"; };
+		4CDA33CE16E515E800D42877 /* UnitPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UnitPicker.m; path = ExpenseApp/Controls/Pickers/UnitPicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +211,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C09842416E65E6D00D537A7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4C09842716E65EE500D537A7 /* BL */,
+				4CBB192816CCDC810070A187 /* DAL */,
+				4CBB19A016CD051E0070A187 /* SAL */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		4C09842616E65EB400D537A7 /* UITextFields */ = {
+			isa = PBXGroup;
+			children = (
+				4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */,
+				4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */,
+				4CBB199316CCF4010070A187 /* UICurrencyTextField.h */,
+				4CBB199416CCF4010070A187 /* UICurrencyTextField.m */,
+				4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */,
+				4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */,
+				4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */,
+				4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */,
+				4CBB198916CCF3AF0070A187 /* UIDateTextField.h */,
+				4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */,
+				4CBB199A16CCF4730070A187 /* UIMonthTextField.h */,
+				4CBB199B16CCF4730070A187 /* UIMonthTextField.m */,
+				4CBB199D16CCF4950070A187 /* UIUnitTextField.h */,
+				4CBB199E16CCF4950070A187 /* UIUnitTextField.m */,
+			);
+			name = UITextFields;
+			sourceTree = "<group>";
+		};
+		4C09842716E65EE500D537A7 /* BL */ = {
+			isa = PBXGroup;
+			children = (
+				4C09842B16E6648E00D537A7 /* Managers */,
+				4C09842816E65F1000D537A7 /* Backend.h */,
+				4C09842916E65F1000D537A7 /* Backend.m */,
+			);
+			name = BL;
+			sourceTree = "<group>";
+		};
+		4C09842B16E6648E00D537A7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4C09842C16E664B900D537A7 /* EmployeeManager.h */,
+				4C09842D16E664B900D537A7 /* EmployeeManager.m */,
+				4C42D3EB16E76130001CAB48 /* ExpenseManager.h */,
+				4C42D3EC16E76130001CAB48 /* ExpenseManager.m */,
+				4C42D3F116E76F4E001CAB48 /* ExpenseFormManager.h */,
+				4C42D3F216E76F4E001CAB48 /* ExpenseFormManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		4C5AE61C16CF9A8D005FC6F2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +279,8 @@
 		4C5AE62E16CF9F84005FC6F2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4C09842116E6598800D537A7 /* NSData+Base64.h */,
+				4C09842216E6598800D537A7 /* NSData+Base64.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -244,15 +323,12 @@
 		4CBB18FE16CCD4830070A187 /* ExpenseApp */ = {
 			isa = PBXGroup;
 			children = (
+				4C09842416E65E6D00D537A7 /* Core */,
 				4C5AE62E16CF9F84005FC6F2 /* Utils */,
-				4CBB19A016CD051E0070A187 /* SAL */,
 				4CBB199916CCF42B0070A187 /* Controls */,
-				4CBB198616CCF2D10070A187 /* UIDrawView.h */,
-				4CBB198716CCF2D10070A187 /* UIDrawView.m */,
 				4CBB194816CCE4370070A187 /* Controllers */,
 				4CBB190716CCD4830070A187 /* AppDelegate.h */,
 				4CBB190816CCD4830070A187 /* AppDelegate.m */,
-				4CBB192816CCDC810070A187 /* DAL */,
 				4CBB18FF16CCD4830070A187 /* Supporting Files */,
 			);
 			path = ExpenseApp;
@@ -265,6 +341,7 @@
 				4CBB190116CCD4830070A187 /* InfoPlist.strings */,
 				4CBB190416CCD4830070A187 /* main.m */,
 				4CBB190616CCD4830070A187 /* ExpenseApp-Prefix.pch */,
+				4C09841E16E62DF400D537A7 /* clear.png */,
 				4CBB190A16CCD4830070A187 /* Default.png */,
 				4CBB190C16CCD4830070A187 /* Default@2x.png */,
 				4CBB190E16CCD4830070A187 /* Default-568h@2x.png */,
@@ -291,6 +368,8 @@
 		4CBB194816CCE4370070A187 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C09841B16E6275700D537A7 /* MyCustomNavigationController.h */,
+				4C09841C16E6275700D537A7 /* MyCustomNavigationController.m */,
 				4CBB194416CCE41C0070A187 /* SignController.h */,
 				4CBB194516CCE41C0070A187 /* SignController.m */,
 				4CBB194116CCE3EB0070A187 /* AbroadController.h */,
@@ -317,21 +396,10 @@
 		4CBB199916CCF42B0070A187 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				4CDA33C616E4BE0900D42877 /* pickers */,
-				4CBB199616CCF4220070A187 /* UIDomesticTypeTextField.h */,
-				4CBB199716CCF4220070A187 /* UIDomesticTypeTextField.m */,
-				4CBB199316CCF4010070A187 /* UICurrencyTextField.h */,
-				4CBB199416CCF4010070A187 /* UICurrencyTextField.m */,
-				4CBB198F16CCF3E10070A187 /* UIAbroadTypeTextField.h */,
-				4CBB199016CCF3E10070A187 /* UIAbroadTypeTextField.m */,
-				4CBB198C16CCF3CA0070A187 /* UIProjectCodeTextField.h */,
-				4CBB198D16CCF3CA0070A187 /* UIProjectCodeTextField.m */,
-				4CBB198916CCF3AF0070A187 /* UIDateTextField.h */,
-				4CBB198A16CCF3AF0070A187 /* UIDateTextField.m */,
-				4CBB199A16CCF4730070A187 /* UIMonthTextField.h */,
-				4CBB199B16CCF4730070A187 /* UIMonthTextField.m */,
-				4CBB199D16CCF4950070A187 /* UIUnitTextField.h */,
-				4CBB199E16CCF4950070A187 /* UIUnitTextField.m */,
+				4CBB198616CCF2D10070A187 /* UIDrawView.h */,
+				4CBB198716CCF2D10070A187 /* UIDrawView.m */,
+				4CDA33C616E4BE0900D42877 /* UIPickerViews */,
+				4C09842616E65EB400D537A7 /* UITextFields */,
 			);
 			name = Controls;
 			path = ..;
@@ -344,7 +412,7 @@
 			name = SAL;
 			sourceTree = "<group>";
 		};
-		4CDA33C616E4BE0900D42877 /* pickers */ = {
+		4CDA33C616E4BE0900D42877 /* UIPickerViews */ = {
 			isa = PBXGroup;
 			children = (
 				4CDA33CA16E4BE2E00D42877 /* MonthPicker.h */,
@@ -357,8 +425,10 @@
 				4C09840C16E5EF3100D537A7 /* AbroadTypePicker.m */,
 				4C09840E16E5F07C00D537A7 /* CurrencyPicker.h */,
 				4C09840F16E5F07C00D537A7 /* CurrencyPicker.m */,
+				4C09841116E5F85700D537A7 /* ProjectPicker.h */,
+				4C09841216E5F85700D537A7 /* ProjectPicker.m */,
 			);
-			name = pickers;
+			name = UIPickerViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +526,7 @@
 				4CBB190F16CCD4830070A187 /* Default-568h@2x.png in Resources */,
 				4CBB191A16CCD4E30070A187 /* MainStoryboard_iPad.storyboard in Resources */,
 				4CBB191B16CCD4E30070A187 /* MainStoryboard_iPhone.storyboard in Resources */,
+				4C09841F16E62DF400D537A7 /* clear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +566,13 @@
 				4C09840716E5EA6900D537A7 /* DomesticTypePicker.m in Sources */,
 				4C09840D16E5EF3100D537A7 /* AbroadTypePicker.m in Sources */,
 				4C09841016E5F07C00D537A7 /* CurrencyPicker.m in Sources */,
+				4C09841316E5F85700D537A7 /* ProjectPicker.m in Sources */,
+				4C09841D16E6275700D537A7 /* MyCustomNavigationController.m in Sources */,
+				4C09842316E6598800D537A7 /* NSData+Base64.m in Sources */,
+				4C09842A16E65F1000D537A7 /* Backend.m in Sources */,
+				4C09842E16E664B900D537A7 /* EmployeeManager.m in Sources */,
+				4C42D3ED16E76131001CAB48 /* ExpenseManager.m in Sources */,
+				4C42D3F316E76F4F001CAB48 /* ExpenseFormManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +656,7 @@
 				GCC_PREFIX_HEADER = "ExpenseApp/ExpenseApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "ExpenseApp/ExpenseApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -594,6 +673,7 @@
 				GCC_PREFIX_HEADER = "ExpenseApp/ExpenseApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
 				INFOPLIST_FILE = "ExpenseApp/ExpenseApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",

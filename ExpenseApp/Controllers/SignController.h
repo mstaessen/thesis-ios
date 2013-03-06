@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIDrawView *signatureView;
 
 - (IBAction)send:(UIBarButtonItem *)sender;
+- (IBAction)clear:(UIButton *)sender;
 
 @end

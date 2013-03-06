@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Backend.h"
 
-
-@interface LoginController : UITableViewController
+@interface LoginController : UITableViewController <BackendDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;

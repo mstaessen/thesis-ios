@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrencyPicker.h"
 
-@interface UICurrencyTextField : UITextField
-
+@interface UICurrencyTextField : UITextField<CurrencyPickerDelegate, UITextFieldDelegate>
+@property (nonatomic, strong) NSString* currency;
 @end

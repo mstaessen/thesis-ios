@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProjectPicker.h"
 
-@interface UIProjectCodeTextField : UITextField
-
+@interface UIProjectCodeTextField : UITextField<ProjectPickerDelegate, UITextFieldDelegate>
+@property (nonatomic, strong) NSString* project;
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "SignController.h"
+#import "MyCustomNavigationController.h"
+#import "NSData+Base64.h"
 
 @interface SignController ()
 
@@ -36,5 +38,18 @@
 }
 
 - (IBAction)send:(UIBarButtonItem *)sender {
+	
+	self.txtRemarks.text;
+	self.swNotifications;
+	NSString *base64EncodedImage = [UIImageJPEGRepresentation([self.signatureView getSignatureImage], 0.8) base64EncodedString];
+	NSLog(@"remarks: %@ switch: %c image: %@", self.txtRemarks.text, self.swNotifications.isEnabled, base64EncodedImage);
 }
+
+- (IBAction)clear:(UIButton *)sender {
+	NSLog(@"We clearen");
+	[self.signatureView clearSignature];
+}
+
+
+
 @end

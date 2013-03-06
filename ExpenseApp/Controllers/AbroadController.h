@@ -12,7 +12,7 @@
 #import "UIAbroadTypeTextField.h"
 #import "UICurrencyTextField.h"
 
-@interface AbroadController : UITableViewController
+@interface AbroadController : UITableViewController <UIImagePickerControllerDelegate, UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UIDateTextField *txtDate;
 @property (weak, nonatomic) IBOutlet UIProjectCodeTextField *txtProjectCode;
 @property (weak, nonatomic) IBOutlet UIAbroadTypeTextField *txtType;

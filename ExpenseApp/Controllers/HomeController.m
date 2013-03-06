@@ -64,29 +64,41 @@ NSManagedObjectContext *context;
 }
 
 - (IBAction)logout:(UIBarButtonItem *)sender {
+	
 	NSLog(@"Pushed the logout button.");
 	
-	NSError* error;
+	[Backend setDelegate:self];
+	[Backend logout];
 	
-	NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
-	[fetchRequest setFetchLimit:1];
-	Employee *user = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-	NSLog(@"firstname: %@", [user valueForKey:@"firstName"]);
-	
-	if(user)
-	{
-		[context deleteObject:user];
-		if (![context save:&error]) {
-			/*
-			 Replace this implementation with code to handle the error appropriately.
-			 
-			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-			 */
-			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			abort();
-		} else {
-			[self performSegueWithIdentifier:@"toLoginForm" sender:self];
-		}
-	}
+//	NSLog(@"Pushed the logout button.");
+//	
+//	NSError* error;
+//	
+//	NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
+//	[fetchRequest setFetchLimit:1];
+//	Employee *user = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
+//	NSLog(@"firstname: %@", [user valueForKey:@"firstName"]);
+//	
+//	if(user)
+//	{
+//		[context deleteObject:user];
+//		if (![context save:&error]) {
+//			/*
+//			 Replace this implementation with code to handle the error appropriately.
+//			 
+//			 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
+//			 */
+//			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+//			abort();
+//		} else {
+//			[self performSegueWithIdentifier:@"toLoginForm" sender:self];
+//		}
+//	}
 }
+
+- (void)didLogOut
+{
+	[self performSegueWithIdentifier:@"toLoginForm" sender:self];
+}
+
 @end
