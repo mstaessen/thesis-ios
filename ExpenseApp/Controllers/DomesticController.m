@@ -7,9 +7,12 @@
 //
 
 #import "DomesticController.h"
+#import "Backend.h"
+#import "NSData+Base64.h"
 
 @interface DomesticController ()
 @property (nonatomic, retain, readwrite) UIPopoverController* popover;
+@property (nonatomic, retain, readwrite) UIImage *image;
 @end
 
 @implementation DomesticController
@@ -56,6 +59,13 @@
 }
 
 - (IBAction)add:(UIButton *)sender {
+	NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+	[f setNumberStyle:NSNumberFormatterDecimalStyle];
+	NSNumber * amount = [f numberFromString:self.txtAmount.text];
+	
+	NSString *base64EncodedImage = [UIImageJPEGRepresentation(_image, 0.8) base64EncodedString];
+	
+	[Backend createDomesticExpense:self.txtDate.currentDate projectCode:self.txtProjectCode.project amount:amount remarks:self.txtRemarks.text evidence:base64EncodedImage expenseTypeId:self.txtType.type];
 }
 
 #pragma mark -
@@ -63,8 +73,8 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *image = [info valueForKey:UIImagePickerControllerOriginalImage];
-    [self.imgEvidence setImage:image];
+    _image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    [self.imgEvidence setImage:_image];
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -9,7 +9,7 @@
 #import "InfoController.h"
 #import "AppDelegate.h"
 #import <CoreData/NSFetchRequest.h>
-#import "Employee.h"
+#import "Backend.h"
 
 @interface InfoController ()
 
@@ -31,9 +31,6 @@ NSManagedObjectContext *context;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-	AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-	context = [appDelegate managedObjectContext];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,23 +38,17 @@ NSManagedObjectContext *context;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
-	NSError* error;
-	
-	NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Employee"];
-	[fetchRequest setFetchLimit:1];
-	Employee *user = [[context executeFetchRequest:fetchRequest error:&error] lastObject];
-	NSLog(@"firstname: %@", [user valueForKey:@"firstName"]);
-	
-	if(user)
+	if([Backend isAuthenticated])
 	{
-		_lblFirstName.text = [user firstName];
-		_lblLastName.text = [user lastName];
-		_txtEmail.text = [user email];
-		_txtEmployeeNumber.text = [NSString stringWithFormat:@"%@", [user employeeNumber]];
-		_txtUnit.unit = [[user unitId] intValue];
+		_lblFirstName.text = [Backend getFirstName];
+		_lblLastName.text = [Backend getLastName];
+		_txtEmail.text = [Backend getEmail];
+		_txtEmployeeNumber.text = [NSString stringWithFormat:@"%@", [Backend getEmployeeNumber]];
+		NSLog(@"unit id: %@", [Backend getUnitId]);
+		_txtUnit.unit = [[Backend getUnitId] integerValue];
 	}
 	else{
-		NSLog(@"There should be a user logged in %@, %@", error, [error userInfo]);
+		NSLog(@"There should be a user logged in");
 		abort();
 	}
 	

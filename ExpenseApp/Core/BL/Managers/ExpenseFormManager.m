@@ -35,7 +35,7 @@
 //	sendForm();
 }
 
-public void send (int employeeId, string signature, string remarks, bool notification, List<Expense> expenses)
+- (void) send:(int) employeeId signature:(NSString*)signature remarks:(NSString*)remarks notifications:(bool)notification expenses:(NSArray*)expenses
 {
 //	form.date = DateTime.Now;
 //	form.employeeId = employeeId;
@@ -46,31 +46,31 @@ public void send (int employeeId, string signature, string remarks, bool notific
 //	sendForm();
 }
 
-private void sendForm ()
+- (void) sendForm
 {
-	try {
-		svc.saveExpense (token, form);
-	} catch (Exception ex) {
-		throw new ExpenseException("Error while save expense form.", ex);
-	}
+//	try {
+//		svc.saveExpense (token, form);
+//	} catch (Exception ex) {
+//		throw new ExpenseException("Error while save expense form.", ex);
+//	}
 }
 
-public List<SavedExpenseForm> getExpenseForms (string token)
+- (NSArray*) getExpenseForms:token
 {
-	try {
-		return svc.getExpenseForms (token);
-	} catch (Exception ex) {
-		throw new ExpenseException("Error while getting expense forms from API.", ex);
-	}
+//	try {
+//		return svc.getExpenseForms (token);
+//	} catch (Exception ex) {
+//		throw new ExpenseException("Error while getting expense forms from API.", ex);
+//	}
 }
 
-public string getFormPDF (int formId, string filename)
+- (NSString*) getFormPDF:(int) formId filename:(NSString*) filename
 {
-	try {
-		return svc.getExpenseFormPDF (token, formId, filename);
-	} catch (Exception ex) {
-		throw new ExpenseException("Error while getting expense form PDF", ex);
-	}
+//	try {
+//		return svc.getExpenseFormPDF (token, formId, filename);
+//	} catch (Exception ex) {
+//		throw new ExpenseException("Error while getting expense form PDF", ex);
+//	}
 }
 
 @end

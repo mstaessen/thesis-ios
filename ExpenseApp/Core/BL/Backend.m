@@ -8,7 +8,8 @@
 
 #import "Backend.h"
 #import "Expense.h"
-#import "EmployeeManager.h"
+//#import "EmployeeManager.h"
+
 
 @implementation Backend
 
@@ -21,6 +22,7 @@ static Backend *sharedObject;
 	if (sharedObject == nil) {
 		sharedObject = [[super allocWithZone:NULL] init];
 		[Backend sharedInstance].um = [[EmployeeManager alloc] init:[Backend sharedInstance]];
+		[Backend sharedInstance].em = [[ExpenseManager alloc] init:[Backend sharedInstance]];
 	}
 	return sharedObject;
 }
@@ -63,37 +65,37 @@ static Backend *sharedObject;
 
 + (NSString*) getFirstName
 {
-//	return um.getFirstName();
+	return [[Backend sharedInstance].um getFirstName];
 }
 
 + (NSString*) getLastName
 {
-//	return um.getLastName();
+	return [[Backend sharedInstance].um getLastName];
 }
 
 + (NSString*) getEmail
 {
-//	return um.getEmail();
+	return [[Backend sharedInstance].um getEmail];
 }
 
 + (NSString*) getEmployeeNumber
 {
-//	return um.getEmployeeNumber();
+	return [[Backend sharedInstance].um getEmployeeNumber];
 }
 
 + (NSString*) getFullName
 {
-//	return um.getFullName();
+	return [[Backend sharedInstance].um getFullName];
 }
 
-+ (int) getUnitId
++ (NSNumber*) getUnitId
 {
-//	return um.getUnitId();
+	return [[Backend sharedInstance].um getUnitId];
 }
 
 + (bool) isAuthenticated
 {
-//	return um.isAuthenticated();
+	return [[Backend sharedInstance].um isAuthenticated];
 }
 
 
@@ -102,30 +104,31 @@ static Backend *sharedObject;
 + (void) createDomesticExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence expenseTypeId:(int)expenseTypeId
 {
 //	em.createDomesticExpense(date, projectCode, amount, remarks, evidence, "EUR", expenseTypeId);
+	[[Backend sharedInstance].em createDomesticExpense:date projectCode:projectCode amount:amount remarks:remarks evidence:evidence currency:@"EUR" expenseTypeId:expenseTypeId];
 }
 
 + (void) createAbroadExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence currency:(NSString*)currency expenseTypeId:(int)expenseTypeId
 {
-//	em.createAbroadExpense(date, projectCode, amount, remarks, evidence, currency, expenseTypeId);
+	[[Backend sharedInstance].em createAbroadExpense:date projectCode:projectCode amount:amount remarks:remarks evidence:evidence currency:currency expenseTypeId:expenseTypeId];
 }
 
 + (NSArray*) getExpenses {
-//	return em.getExpenses();
+	return [[Backend sharedInstance].em getExpenses];
 }
 
-+ (Expense*) getExpense:(int)Id
++ (Expense*) getExpense:(NSManagedObjectID *)Id
 {
-//	return em.getExpense(id);
+	return [[Backend sharedInstance].em getExpense:Id];
 }
 
 + (void) updateExpense:(Expense*) expense
 {
-//	em.updateExpense(e);
+	return [[Backend sharedInstance].em updateExpense:expense];
 }
 
 + (void) deleteExpense:(Expense*) expense
 {
-//	em.deleteExpense(e);
+	return [[Backend sharedInstance].em deleteExpense:expense];
 }
 
 #pragma mark - Form manipulations

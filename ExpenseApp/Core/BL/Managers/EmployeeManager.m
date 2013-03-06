@@ -187,4 +187,44 @@
 	}
 }
 
+#pragma mark - Getters
+
+- (NSString*) getFirstName
+{
+	return user.firstName;
+}
+
+- (NSString*) getLastName
+{
+	return user.lastName;
+}
+
+- (NSString*) getEmail
+{
+	return user.email;
+}
+
+- (NSString*) getEmployeeNumber
+{
+	return user.employeeNumber;
+}
+
+- (NSString*) getFullName
+{
+	return [NSString stringWithFormat:@"%@ %@", user.firstName, user.lastName];
+}
+
+- (NSNumber*) getUnitId
+{
+	return user.unitId;
+}
+
+- (bool) isAuthenticated
+{
+	if(user)
+		return YES;
+	else
+		return NO;
+}
+
 @end

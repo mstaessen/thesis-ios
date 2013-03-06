@@ -9,7 +9,6 @@
 #import "UIDateTextField.h"
 
 @interface UIDateTextField ()
-@property (nonatomic, retain, readwrite) NSDate *currentDate;
 @property (nonatomic, retain, readwrite) NSDateFormatter *dateFormatter;
 @property (nonatomic, retain, readwrite) UIDatePicker *datePicker;
 @end

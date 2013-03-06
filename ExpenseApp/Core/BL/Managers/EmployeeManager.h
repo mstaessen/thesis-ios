@@ -33,4 +33,11 @@
 - (id)init:(id<EmployeeManagerDelegate>)delegateObject;
 - (void) login:(NSString*)email password:(NSString*)password;
 - (void) logout;
+- (NSString*) getFirstName;
+- (NSString*) getLastName;
+- (NSString*) getEmail;
+- (NSString*) getEmployeeNumber;
+- (NSString*) getFullName;
+- (NSNumber*) getUnitId;
+- (bool) isAuthenticated;
 @end

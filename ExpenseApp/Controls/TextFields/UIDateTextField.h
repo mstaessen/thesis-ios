@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIDateTextField : UITextField <UITextFieldDelegate>
-
+@property (nonatomic, retain, readwrite) NSDate *currentDate;
 @end

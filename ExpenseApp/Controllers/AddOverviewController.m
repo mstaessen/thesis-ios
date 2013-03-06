@@ -7,9 +7,11 @@
 //
 
 #import "AddOverviewController.h"
+#import "Backend.h"
+#import "NSData+Base64.h"
 
 @interface AddOverviewController ()
-
+@property (nonatomic, retain, readwrite) NSArray *expenses;
 @end
 
 @implementation AddOverviewController
@@ -32,6 +34,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	_expenses = [Backend getExpenses];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,50 +47,77 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+	return [_expenses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+	Expense* expense = [_expenses objectAtIndex:indexPath.row];
+	
+    static NSString *CellIdentifier = @"ExpenseCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    UIImageView* evidenceImageView = (UIImageView *)[cell viewWithTag:100];
+
+	NSData* imageData = [NSData dataFromBase64String:expense.evidence];
+	UIImage* image = [[UIImage alloc] initWithData:imageData];
+	
+	evidenceImageView.image = image;
+	
+	UILabel* lblDate = (UILabel*)[cell viewWithTag:101];
+	NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+	NSString *dateString = [dateFormatter stringFromDate:expense.date];
+	lblDate.Text = dateString;
+	
+	UILabel* lblAmount = (UILabel*)[cell viewWithTag:102];
+
+	if (![expense.currency isEqualToString:@"EUR"]) {
+		lblAmount.text = [NSString stringWithFormat:@"%@ %@", expense.amount, expense.currency];
+		
+//		try{
+//			lblAmount.Text = expense.amount.ToString() + " " + expense.currency + " (" + Backend.convertToEuro(expense.amount, expense.currency) + " €)";
+//		}catch (Exception ex) {
+//			lblAmount.Text = expense.amount.ToString() + " " + expense.currency;
+//		}
+	} else {
+		lblAmount.text = [NSString stringWithFormat:@"%@ €", expense.amount];
+	}
+	
+	UILabel* lblType = (UILabel*)[cell viewWithTag:103];
+	lblType.text = [NSString stringWithFormat:@"type: %@", expense.expenseTypeId];
+	
     return cell;
 }
 
-/*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+		[Backend deleteExpense:[_expenses objectAtIndex:indexPath.row]];
+		_expenses = [Backend getExpenses];
+		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

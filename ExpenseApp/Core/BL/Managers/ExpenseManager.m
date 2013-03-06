@@ -32,6 +32,9 @@
 //	} catch (Exception ex) {
 //		throw new ExpenseException ("Error while getting project codes for searchterm : " + searchTerm, ex);
 //	}
+	return [[NSArray alloc] initWithObjects:
+			@"G20", @"G30", @"G40",
+			@"G60", @"G70", nil];
 }
 
 - (void) createDomesticExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence currency:(NSString*)currency expenseTypeId:(int)expenseTypeId
@@ -76,43 +79,17 @@
 	return results;
 }
 
-- (Expense *) getExpense:(int) id
+- (Expense *) getExpense:(NSManagedObjectID *) Id
 {
-//	NSFetchRequest *request = [[NSFetchRequest alloc] init];
-//	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Expense" inManagedObjectContext:context];
-//	[request setEntity:entity];
-//	
-//	// Specify that the request should return dictionaries.
-//	[request setResultType:NSManagedObjectResultType];
-//	
-//	// Create an expression for the key path.
-//	NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:@"id"];
-//	
-//	// Create an expression to represent the minimum value at the key path 'creationDate'
-//	NSExpression *minExpression = [NSExpression expressionForFunction:@"min:" arguments:[NSArray arrayWithObject:keyPathExpression]];
-//	
-//	// Create an expression description using the minExpression and returning a date.
-//	NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
-//	
-//	// The name is the key that will be used in the dictionary for the return value.
-//	[expressionDescription setName:@"minDate"];
-//	[expressionDescription setExpression:minExpression];
-//	[expressionDescription setExpressionResultType:NSDateAttributeType];
-//	
-//	// Set the request's properties to fetch just the property represented by the expressions.
-//	[request setPropertiesToFetch:[NSArray arrayWithObject:expressionDescription]];
-//	
-//	// Execute the fetch.
-//	NSError *error = nil;
-//	NSArray *objects = [managedObjectContext executeFetchRequest:request error:&error];
-//	if (objects == nil) {
-//		// Handle the error.
-//	}
-//	else {
-//		if ([objects count] > 0) {
-//			NSLog(@"Minimum date: %@", [[objects objectAtIndex:0] valueForKey:@"minDate"]);
-//		}
-//	}
+	NSError* error;
+	Expense *expense = (Expense *)[context existingObjectWithID:Id error:&error];
+	
+	if(expense){
+		return expense;
+	} else {
+		NSLog(@"Error getting expense: %@, %@", error, [error userInfo]);
+		abort();
+	}
 }
 
 - (void) updateExpense:(Expense*) expense
@@ -129,11 +106,6 @@
 	NSError* error;
 	[context deleteObject:expense];
 	if (![context save:&error]) {
-		/*
-		 Replace this implementation with code to handle the error appropriately.
-		 
-		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-		 */
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	} else {
@@ -155,7 +127,7 @@
     	NSLog(@"Deleted");
     }
     if (![context save:&error]) {
-    	DLog(@"Error deleting - error:%@",error);
+    	NSLog(@"Error deleting - error:%@",error);
     }
 }
 

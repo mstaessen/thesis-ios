@@ -28,4 +28,13 @@
 
 
 - (id)init:(id<ExpenseManagerDelegate>)delegateObject;
+- (NSArray*) getProjectCodeSuggestion:(NSString*) searchTerm;
+- (void) createDomesticExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence currency:(NSString*)currency expenseTypeId:(int)expenseTypeId;
+- (void) createAbroadExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence currency:(NSString*)currency expenseTypeId:(int)expenseTypeId;
+- (void) createExpense:(NSDate*)date projectCode:(NSString*)projectCode amount:(NSNumber*)amount remarks:(NSString*)remarks evidence:(NSString*)evidence currency:(NSString*)currency expenseTypeId:(int)expenseTypeId expenseLocationId:(int)expenseLocationId;
+- (NSArray*) getExpenses;
+- (Expense *) getExpense:(NSManagedObjectID *) id;
+- (void) updateExpense:(Expense*) expense;
+- (void) deleteExpense:(Expense*) expense;
+- (void) deleteAllExpenses;
 @end
